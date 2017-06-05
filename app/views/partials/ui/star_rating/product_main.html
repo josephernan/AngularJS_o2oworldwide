@@ -1,0 +1,10 @@
+<div class="rating">
+  <ul class="display-inline mb0">
+    <li ng-repeat='star in stars' ng-class='star' class='readonly-{{readonly}}' ng-click='toggle($index)'>
+      <i class='fa fa-star'></i>
+    </li>
+  </ul>
+  <span ng-if="countReviews > 0" class="text-lighter">
+    {{countReviews}} customer reviews
+  </span>
+</div>

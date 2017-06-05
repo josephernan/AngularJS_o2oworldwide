@@ -1,0 +1,91 @@
+{
+  "rma": {
+
+    "invoice_no" : "Invoice Number",
+
+    "remove_product_from_return": "Remove Product from Return",
+    "order_status_ineligible": "The order you selected is ineligible for a return.",
+
+    "successfully_submitted_rma": "Successfully Submitted RMA Request",
+    "existing_rma_found": "Found an existing RMA for this order",
+    "successfully_deleted_rma": "Successfully Deleted RMA",
+    "successfully_created_rma": "Successfully Created RMA",
+
+    "errors": {
+      "no_rma_found_for_id": "No RMA found for the given ID",
+      "no_rma_items_selected": "No Items Selected to Return",
+      "submit_general": "There was an Error submitting your RMA request.",
+      "could_not_find_existing": "Could not find existing RMA for the given Order."
+    },
+
+    "index": {
+      "choose_items_to_return": "Choose Items to Return",
+      "ordered_on": "Ordered on",
+      "sold_by": "Sold by",
+      "shipped_on": "Shipped on",
+      "delivered_on": "Delivered on",
+      "max_quantity_to_return": "Max return quantity",
+      "why_are_you_returning": "Why are you returning this?",
+
+      "note": "NOTE",
+      "note_text": "We aren't able to offer policy exceptions in response to comments. Do not include personal information as these comments may be shared with external service providers to identify product defects.",
+
+      "quantity_to_return": "Quantity to return",
+
+      "comments": "Comments",
+      "comments_placeholder": "(Required) Enter Comments and/or a description about why you are returning this item",
+
+      "errors": {
+        "comments_required": "Comments cannot be empty",
+        "no_returning_items": "Please indicate the product(s) you wish to return by checking the checkbox to the left of the product's name."
+      }
+    },
+
+    "info": {
+      "looks_good": "Everything Looks good",
+      "fix_something": "Fix a mistake",
+      "review_rma": "Review this RMA Request",
+      "truthy_notice": "I certify that all of the information above is to the best of my knowledge and belief true, correct and complete. I understand that this information will be used to determine my eligibility to return any and or all items in this order.",
+      "truthy_required": "You must certify the above information to submit this RMA Request.",
+      "submit_rma": "Submit RMA Request",
+
+      "general_comment": "General Comment",
+      "general_comment_placeholder": "Enter a general description or comment about the order and items you are returning"
+    },
+
+    "status": {
+      "title": "View RMA Status",
+
+      "rma_info": "RMA Information",
+
+      "rma_id": "RMA ID",
+      "sku": "SKU",
+      "order_id": "Order ID",
+      "status": "Status",
+      "active": "Active",
+      "true": "Return Active",
+      "false": "Return Inactive",
+      "created_on": "Created On"
+    },
+
+    "reasons": {
+      "null": "",
+      "default": "Please Choose a Reason",
+      "bought_by_mistake": "Bought by mistake",
+      "better_price_available": "Better price available",
+      "product_damaged_shipping_box_ok": "Product damaged, but shipping box OK",
+      "item_arrived_too_late": "Item arrived too late",
+      "missing_parts_or_accessories": "Missing parts or accessories",
+      "product_and_box_damaged": "Product and shipping box both damaged",
+      "wrong_item": "Wrong item was sent",
+      "item_defective_or_doesnt_work": "Item defective or doesn’t work",
+      "recived_extra_item_didnt_purchase": "Received extra item I didn’t buy (no refund needed)",
+      "no_longer_needed": "No longer needed",
+      "didnt_approve_purchase": "Didn't approve purchase",
+      "inaccurate_sm_description": "Inaccurate Social Marketer Product description",
+      "inaccurate_website_description": "Inaccurate website product description",
+      "other": "Other"
+    }
+
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "signup": {
+    "success": "成功：注册成功！",
+    "error": "错误：您提交的信息出现错误，请稍后再试。",
+    "brand_owner": {
+
+    },
+    "marketer": {
+      "h1": "请注册成为环球商网的 <strong class='text-orange'>导购专家</strong>!",
+      "list": {
+        "1": "立刻进入全新的环球电商领域",
+        "2": "快速创立自己的国际电商事业",
+        "3": "无门槛开业、个性化经营",
+        "4": "功能强大的商业管理平台",
+        "5": "100 ％原装优质产品保证丰厚回报"
+      },
+      "h2": "社会化营销从这里开始",
+      "h2_small": "或下载",
+      "info": {
+        "legend_h3": {
+          "text": "注册资料",
+          "small": "创业人的身份"
+        },
+        "is_business": {
+          "label": "您以公司形式加盟环球商网？",
+          "option-0": {
+            "text": "对，",
+            "small": {
+              "text": "我们是个",
+              "strong": "公司"
+            }
+          },
+          "option-1": {
+            "text": "不，",
+            "small": {
+              "text": "我是",
+              "strong": "个人"
+            }
+          }
+        },
+        "help_notice": {
+          "strong1" : "不用担心！",
+          "text1" : "你只需要登记一种形式：",
+          "strong2" : "公司",
+          "text2": "账户，或一个",
+          "strong3": "个人",
+          "text3": "账户。"
+        },
+        "business": {
+          "legend_h3": "公司（法人）",
+          "business_license_id_number": {
+            "label": "营业执照/机构代码",
+            "placeholder": "营业执照/机构代码"
+          },
+          "business_contact": "联系人"
+        },
+        "personal": {
+          "legend_h3": "个人（自然人）"
+        }
+      },
+      "account": {
+        "legend_h3": "创建账户",
+        "email": {
+          "help": "这将是您用来登录的电子邮件地址"
+        },
+        "username": {
+          "help1": "这是您的环球商网社会化营销分网站的独立用户名：",
+          "help2": "如有重复，系统会自动调整用户名。"
+        }
+      },
+      "optional": {
+        "legend_h3": "附加信息",
+        "referral": {
+          "label": "推荐人",
+          "placeholder" : "推荐您来环球商网的朋友的用户名/代码",
+          "help": "请将推荐您的环球商网用户的信息填在这里（如果还没有填了的话）给他们加分。"
+        }
+      }
+    },
+    "customer" : {
+      "customer_signup": "客户注册",
+      "h1" : "创建帐号",
+      "sm_signup" : "注册一个导购员",
+      "username" : {
+        "help1": "为了赚你的环球商网点数，请让您的朋友在他们结账时输入此验证码：",
+        "help2": "如有重复，系统会自动调整用户名。"
+      }
+    },
+    "complete": {
+      "continue_shopping": "继续购物",
+      "goto_backoffice": "跳转到您的后台管理"
+    }
+  }
+}

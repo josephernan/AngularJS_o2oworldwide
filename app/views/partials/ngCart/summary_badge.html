@@ -1,0 +1,5 @@
+<div ng-class="{'nav-cart-10': (ngCart.getTotalItems()>=10 && ngCart.getTotalItems()<100), 'nav-cart-100': ngCart.getTotalItems()>=100}"
+  class="nav-cart-badge">
+  <i class="material-icons material-icons-shopping_cart md-24"></i>
+  <span class="badge badge-notify">{{ngCart.getTotalItemsForSummary()}}</span>
+</div>

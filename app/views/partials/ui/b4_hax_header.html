@@ -1,0 +1,83 @@
+<div id="top-header" ng-controller="HeaderController">
+  <div class="orange-bg clearfix">
+    <div class="container">
+      <div class="row">
+        <div class="row m0">
+          <a data-ui-sref="root.home" class="hover-none">
+            <img id="o2o-logo" src="assets/images/header/header-logo.png" alt="O2O Worldwide Logo">
+          </a>
+          <div class="top-links-container pt10 display-inline">
+            <div class="dropdown">
+              <a href="" class="btn btn-text dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                {{'top-nav.language.language-selector-label' | translate }}
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu" role="menu">
+                <li>
+                  <a ng-click="lang.changeLanguage('en')">{{'top-nav.language.en' | translate}}</a>
+                </li>
+                <li>
+                  <a ng-click="lang.changeLanguage('zh-hans')">{{'top-nav.language.zh-hans' | translate}}</a>
+                </li>
+              </ul>
+            </div>
+            <a data-ui-sref=".signup" class="btn btn-text hidden-xs" style="color: white">{{'general.signup' | translate}}</a>
+            <a ui-sref="root.contact" class="btn btn-text hidden-sm hidden-xs">{{'general.help' | translate}}</a>
+          </div>
+
+          <div class="top-links-container pull-right">
+            <div class="dropdown text-left pull-left">
+              <a href="" class="btn dropdown-toggle text-left m5" data-toggle="dropdown" aria-expanded="false">
+                <span class="nav-line-1">{{'top-nav.your-account-dropdown.line-1' | translate}}</span>
+                <span class="nav-line-2">
+                  {{'top-nav.your-account-dropdown.line-2' | translate}}
+                  <span class="caret"></span>
+                </span>
+              </a>
+              <ul class="dropdown-menu wide-dropdown text-dark-gray" role="menu">
+                <li class="mt10 mb5">
+                  <a href="" class="btn btn-orange center text-white">{{'general.signin' | translate}}</a>
+                </li>
+                <li>
+                  <a class="text-small" ui-sref="root.signup">
+                    {{'top-nav.your-account-dropdown.new-on-o2o' | translate}}
+                    <span class="blue-anchor">{{'top-nav.your-account-dropdown.start-here' | translate}}</span>
+                    </a>
+                </li>
+                <li class="divider"></li>
+                <li><a ui-sref="root.account">{{'top-nav.your-account-dropdown.dashboard' | translate}}</a></li>
+                <li><a ui-sref="root.account">{{'top-nav.your-account-dropdown.orders' | translate}}</a></li>
+                <li><a ui-sref="root.account">{{'top-nav.your-account-dropdown.messages' | translate}}</a></li>
+              </ul>
+            </div>
+            <a ui-sref="root.checkout({step:1})" ngcart-summary class="hidden-xs m5 p5 pull-left"></a>
+
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#top-bs-nav">
+                <span class="sr-only">{{'top-nav.toggle-nav' | translate}}</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="nav-site-links" class="white-bg clearfix">
+    <div class="col-xs-12">
+      <div class="collapse navbar-collapse" id="top-bs-nav">
+        <ul class="top-navbar nav navbar-nav center overflow-hidden">
+          <li data-ng-repeat="item in header.top_nav_items">
+            <a class="text-uppercase text-lighter-gray text-left" ui-sref-active="active" data-ng-class="{ active: $state.includes(item.sref)}" data-ui-sref="{{item.sref}}">{{item.text | translate}}</a>
+          </li>
+          <li class="visible-xs">
+            <a ui-sref="root.checkout({step:1})" ngcart-summary></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

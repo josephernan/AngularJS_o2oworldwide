@@ -1,0 +1,198 @@
+{
+  "products": [
+    {
+      "sku": "ldx-f21",
+      "slug": "Ludax-F21-Weight-Loss-Sugar-Blocker",
+      "name": "F21 Sugar Blocker",
+      "tags": [
+        "ludaxx",
+        "sugar",
+        "blocker",
+        "supplements"
+      ],
+      "brand": "Ludaxx",
+      "availability": "In Stock",
+      "price": "39.95",
+      "qty_available": "2000",
+      "details": {
+        "dimensions": "3.4 x 5.8 x 8.8 inches",
+        "weight": "7.2 ounces",
+        "manufacture_sku": "LUDAXXF21BLOCKER",
+        "first_available": "2015-04-02"
+      },
+      "images": [
+        {
+          "src": "assets/images/products/ldx-f21.png",
+          "alt": "Ludaxx F21 Sugar Blocker"
+        },
+        {
+          "src": "http://oc.ludaxx.com/image/cache/data/Mint_F21-345x345.png",
+          "alt": "Ludaxx F21 Sugar Blocker Mint [Remote]"
+        }
+      ],
+      "category": "Health & Personal Care > Vitamins & Ditary Supplements > Weight Loss > Diet Kits & Systems",
+      "reviews": [
+        {
+          "title": "It Changed My Life",
+          "text": "The F21 Sugar Blocker Changed my life. Now I can eat what I want and still feel great!",
+          "rating": 4.5,
+          "date": "2015-04-08 12:59:30",
+          "author": {
+            "name": "Stephen Jones",
+            "user_id": 220
+          }
+        },
+        {
+          "title": "The Best thing since sliced Bread",
+          "text": "The F21 Sugar Blocker Changed my life. Now I can eat what I want and still feel great!",
+          "rating": 5,
+          "date": "2015-04-08 9:22:30",
+          "author": {
+            "name": "Janna Storm",
+            "user_id": 0
+          }
+        }
+      ],
+      "key_points": [
+        "Effortlessly lose Weight",
+        "Zero Caffeine",
+        "Zero Sugar",
+        "All Natural Sugar Blocker",
+        "For every gram of F21 you can block up to 20 grams of sugar (sucrose)",
+        "Boosts Immune system response"
+      ],
+      "description": "F21 has been specifically formulated as an All Natural Sugar Blocker to help limit your blood sugar absorption. For every gram of F21 you can block up to 20 grams of sugar (sucrose). Additionally, our patent pending formula not only helps promote weight loss, it benefits the digestive system by allowing the blocked sucrose to support beneficial probiotic bacteria while the polysaccharide (PSK) boosts your immune system response."
+    },
+    {
+      "sku": "ldx-prime",
+      "slug": "Ludax-Prime-All-Natural-Carb-Blocker",
+      "name": "Prime",
+      "tags": [
+        "ludaxx",
+        "carb",
+        "blocker",
+        "supplements"
+      ],
+      "brand": "Ludaxx",
+      "availability": "In Stock",
+      "price": "39.50",
+      "qty_available": "3",
+      "images": [
+        {
+          "src": "http://oc.ludaxx.com/image/cache/data/prime_bottle-345x345.png",
+          "alt": "Ludaxx F21 Sugar Blocker [URL]"
+        },
+        {
+          "src": "assets/images/products/ldx-prime.png",
+          "alt": "Ludaxx F21 Sugar Blocker [Local]"
+        }
+      ],
+      "category": "Health & Personal Care > Vitamins & Ditary Supplements > Weight Loss > Diet Kits & Systems",
+      "reviews": [
+        {
+          "title": "It Changed My Life",
+          "text": "The Ludaxx Prime Changed my life. Now I can eat what I want and still feel great!",
+          "rating": 4.5,
+          "date": "2015-04-08 13:00:30",
+          "author": {
+            "name": "Stephen Jones",
+            "user_id": 220
+          }
+        },
+        {
+          "title": "The Best thing since sliced Bread",
+          "text": "The Ludaxx Prime Changed my life. Now I can eat what I want and still feel great!",
+          "rating": 5,
+          "date": "2015-04-08 9:30:30",
+          "author": {
+            "name": "Janna Storm",
+            "user_id": 0
+          }
+        }
+      ],
+      "key_points": [
+        "All Natural Ingredients",
+        "Effortlessly Blockes Carbs (starches)",
+        "Restore balance",
+        "Master control of your desires"
+      ],
+      "description": "<p>PRIME is an all-natural ingredient product designed to help block starches.</p><p>PRIME is formulated to help inhibit the key enzymes that breakdown starch, carbs and other simple sugars from being absorbed in the body. At the same time, it gives the body essential antioxidants to support the immune system!</p><p>Pure source. Restore balance. Improve body. Master control. Empower your desires. Go ahead! We’ve got you covered!</p>"
+    },
+    {
+      "sku": "flat-atk-seal",
+      "slug": "Flat-Attack-Tire-Sealang",
+      "name": "Flat Attack Tire Sealant",
+      "tags": [],
+      "brand": "Flat Attack",
+      "availability": "In Stock",
+      "price": "8.95",
+      "qty_available": "3000",
+      "details": {
+        "dimensions": "3.4 x 5.8 x 8.8 inches",
+        "weight": "7.2 ounces",
+        "first_available": "2015-04-02"
+      },
+      "images": [
+        {
+          "src": "http://phoenix.o2oworldwide.com/files/thumb/15/400/400",
+          "alt": "Flat Attack"
+        }
+      ],
+      "category": "",
+      "reviews": [],
+      "key_points": [
+        "Enviromentally friendly",
+        "Easy Flat Fix"
+      ],
+      "description": "Flat Attack is the only tire sealant that is intentionally designed and manufactured to be environmentally friendly!"
+    },
+    {
+      "sku": "brain-cubed",
+      "slug": "Brain-Cubed-Better-Memory-Concentration",
+      "name": "Brain Cubed",
+      "tags": [],
+      "brand": "Brain Cubed",
+      "availability": "In Stock",
+      "price": "39.95",
+      "qty_available": "3000",
+      "details": {
+        "dimensions": "3.4 x 5.8 x 8.8 inches",
+        "weight": "7.2 ounces",
+        "first_available": "2015-04-02"
+      },
+      "images": [
+        {
+          "src": "http://phoenix.o2oworldwide.com/files/thumb/16/400/200",
+          "alt": "Brain Cubed"
+        }
+      ],
+      "category": "",
+      "reviews": [],
+      "key_points": [
+        "Learn Faster",
+        "Rememeber better",
+        "Sientificaly formulated",
+        "Boost Memory",
+        "Boost concentration and mood"
+      ],
+      "description": "60 ct Bottle - Brain Cubed was scientifically developed with powerful ingredients to boost memory, mood and concentration."
+    }
+  ],
+  "categories": [
+    {
+      "icon": "fa-medkit",
+      "title_key": "store.categories.supplements",
+      "tag": "supplements"
+    },
+    {
+      "icon": "fa-location-arrow",
+      "title_key": "store.categories.outdoors",
+      "tag": "outdoors"
+    },
+    {
+      "icon": "fa-medkit",
+      "title_key": "store.categories.skincare",
+      "tag": "skincare"
+    }
+  ]
+}

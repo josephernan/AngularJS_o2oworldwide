@@ -1,0 +1,24 @@
+.ibanks{}
+.ibanks span{ float:left; height:23px; line-height:23px; margin:0 15px 15px 0; display:inline-block; padding-left:30px;position: relative; }
+.ibanks .bank_logo{ background:url('/assets/images/checkout/union_pay_bank_logos.gif') no-repeat 0 0;}
+.ibanks .boc{ background-position:5px -24px; }
+.ibanks .ceb{ background-position:0 -618px;}
+.ibanks .cmbc{ background-position:5px -47px; }
+.ibanks .hxb{ background-position:5px -411px;}
+.ibanks .beijing{ background-position:5px -289px; }
+.ibanks .icbc{ background-position:5px -127px; }
+.ibanks .abc{ background-position:5px 2px; }
+.ibanks .ccb{ background-position:5px -73px; }
+.ibanks .pingan{ background-position:0 -646px; }
+.ibanks .spd{ background-position:5px -182px; }
+.ibanks .gdb{ background-position:5px -320px; }
+.ibanks .sdb{ background-position:5px -349px; }
+.ibanks .cmb{ background-position:5px -209px; }
+.ibanks .shanghai{ background-position:5px -382px; }
+.ibanks .citic{ background-position:5px -239px; }
+.ibanks .cib{ background-position:5px -264px; }
+.ibanks .psbc{ background-position:5px -155px; }
+.ibanks .comm{ background-position:5px -674px; }
+.ibanks .nbcb{ background-position:5px -527px; }
+.ibanks .hkbea{ background-position:5px -560px; }
+.ibanks .citi{ background-position:2px -592px; }

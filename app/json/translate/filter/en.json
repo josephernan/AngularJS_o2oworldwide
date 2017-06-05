@@ -1,0 +1,27 @@
+{
+  "filter": {
+    "search": {
+      "show_results": "Show Results",
+      "all_brands": "All Brands",
+      "no_products_or_brands_found": "No Products or Brands Found",
+      "found" : "found",
+      "matching_products": "Matching Products.",
+      "matching_brands": "Matching Brands.",
+
+      "search_result_for": "Search Result for",
+      "search_products_and_brands_below": "Search Products and brands below",
+
+      "sort_options": {
+        "sort_by": "Sort By",
+        "price": "Price",
+        "name": "Name",
+
+        "relevance": "Relevance",
+        "a-z": "A - Z",
+        "z-a": "Z - A",
+        "low-high": "Low - High",
+        "high-low": "High - Low"
+      }
+    }
+  }
+}

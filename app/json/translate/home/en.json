@@ -1,0 +1,55 @@
+{
+  "home": {
+    "slides": {
+      "1": {
+        "title": {
+          "1": "Become an O2O Social Marketer",
+          "2": "Start a Business",
+          "3": "Sell Genuine Products to through your Personal Network"
+        }
+      }
+    },
+    "h2": {
+      "1": "O2O Worldwide",
+      "2": "Authentic Global Products Meeting China Customer Demand"
+    },
+    "how-it-works": {
+      "h2": "How It Works",
+      "h4": "Centralized Fulfillment",
+      "brand_owners": {
+        "h4": "Brand Owners",
+        "content": "Unique social and mobile commerce model ensures fast sell-through and strong long-term sales channel relationships. Social Marketers certified to sell your products will sell with confidence and expertise. Easy integration to O2O website and logistics."
+      },
+      "social_marketers": {
+        "h4": "Social Marketers",
+        "content": "O2O Social Marketers can apply their unique expertise and strong network and personal relationships to sell 100% authentic products with no pre-purchase requirement, fast commission payments, personalized e-commerce sites, and easy technology for lead generation, order management, and analytics and reporting."
+      },
+      "consumers": {
+        "h4": "Consumers",
+        "content": "O2O customers can expect 100% genuine products from around the world, easy ordering and fulfillment processes and the lowest advertised price for all products."
+      }
+    },
+    "social-commerce": {
+      "h2": {
+        "1": "SOCIAL COMMERCE IN THE 21ST CENTURY",
+        "2": "High-Demand, Authentic Products from Around the Globe Sold Through Personal Expertise"
+      },
+      "ctas": {
+        "vendor": "Sell Products <br> Through O2O",
+        "social_marketer": "Become an O2O <br> Social Marketer"
+      }
+    },
+    "turnkey": {
+      "h2": "Complete Turnkey Social Commerce Business Model and Platform",
+      "manage": {
+        "h3": "Manage",
+        "content": "The 020 Business Platform gives you instant access to authentic US Products. You begin by selecting which products you want to offer on your website. Then you decide how many products you expect to sell.  Your selected products are then shipped to a local fulfillment center ready for shipment to your customers. The 020 Business Platform lets you set up your store, place orders, manage customers and lots more!"
+      },
+      "profit": {
+        "h3": "Profit",
+        "content": "Earning a profit is simple with 020 Worldwide. Once a customer places an order on your website, the product is then paid for and the item(s) ship directly to your customers. You keep the profits! It’s that simple. O2O's platform will allow you to complete sales with customers anytime and anywhere through mobile devices and tablets and can work online and offline!"
+      },
+      "cta": "Learn More"
+    }
+  }
+}

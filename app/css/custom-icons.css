@@ -1,0 +1,12 @@
+.custom-icon {
+  height: 13px;
+  width: 13px;
+}
+
+.custom-icon.cosmetics {
+  background-image: url('../images/home/custom-icons/creme-icon.13x13.png');
+}
+
+.custom-icon.health-and-beauty {
+  background-image: url('../images/home/custom-icons/mascara-icon.13x13.png');
+}

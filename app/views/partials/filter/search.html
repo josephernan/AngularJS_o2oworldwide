@@ -1,0 +1,131 @@
+<div class="container-fluid pt30 pb50">
+
+  <div class="row">
+    <div class="col-md-3 hidden-sm hidden-xs">
+      <h2 class="border-left-orange text-lighter-1x mb20 mt0">{{ 'filter.search.show_results' | translate }}</h2>
+      <div ng-if="search_brands().length !== 0 && $store.brands.length !== search_brands().length" class="panel">
+        <div class="panel-heading text-lighter-1x">
+          <h3>{{'general.brand' | translate}}</h3>
+        </div>
+        <div class="panel-body text-lighter-2x">
+          <div ng-repeat="brand in search_brands()">
+            <a ng-click="set_search_query(brand_meta(brand.id, 'name'))">{{brand_meta(brand.id, 'name')}}</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-heading text-lighter-1x">
+          <h3>{{'filter.search.all_brands' | translate}}</h3>
+        </div>
+        <div class="panel-body text-lighter-2x">
+          <div ng-repeat="brand in $store.brands">
+            <a ng-click="set_search_query(brand_meta(brand.id, 'name'))">{{brand_meta(brand.id, 'name')}}</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="col-md-9">
+      <div class="panel panel-orange">
+        <div class="panel-heading">
+          <h1 class="disable-animations" ng-if="search_query.length !== 0">{{ 'filter.search.search_result_for' | translate}}: <em>{{search_query}}</em></h1>
+          <h1 class="disable-animations" ng-if="search_query.length === 0">{{ 'filter.search.search_products_and_brands_below' | translate}}...</h1>
+        </div>
+        <div class="panel-body">
+          <form>
+            <div class="hidden-sm hidden-xs">
+              <div class="search-form-container form-group label-floating">
+                <label class="control-label" for="addon1">{{'general.product_search' | translate}}</label>
+                <div class="input-group">
+                  <input id="root-search_products" ng-model="search_query" ng-model-options="{ updateOn: 'default blur', debounce: { 'default': 200, 'blur': 0 } }" focus-on="root.search_products" type="text" class="form-control">
+                  <span class="input-group-btn hidden-sm">
+                      <button class="btn btn-primary btn-raised" type="button">{{'general.search' | translate}}</button>
+                  </span>
+                  <span class="input-group-btn">
+                    <a href="bootstrap-elements.html" data-target="#" class="btn btn-raised dropdown-toggle" data-toggle="dropdown">
+                      <span ng-bind-html="sort_by_label"></span>
+                      <i class="material-icons material-icons-arrow_drop_down md-24 rotate"></i>
+                    </a>
+                    <ul class="dropdown-menu ml10">
+                      <li><a ng-click="sort_by($event, 'relevance', false)">{{ 'filter.search.sort_options.relevance' | translate}}</a></li>
+                      <li role="separator" class="divider"></li>
+                      <li><a ng-click="sort_by($event, 'name', false)">{{ 'filter.search.sort_options.name' | translate}}: {{ 'filter.search.sort_options.a-z' | translate}}</a></li>
+                      <li><a ng-click="sort_by($event, 'name', true)">{{ 'filter.search.sort_options.name' | translate}}: {{ 'filter.search.sort_options.z-a' | translate}}</a></li>
+                      <li role="separator" class="divider"></li>
+                      <li><a ng-click="sort_by($event, 'price_float', false)">{{ 'filter.search.sort_options.price' | translate}}: {{ 'filter.search.sort_options.low-high' | translate}}</a></li>
+                      <li><a ng-click="sort_by($event, 'price_float', true)">{{ 'filter.search.sort_options.price' | translate}}: {{ 'filter.search.sort_options.high-low' | translate}}</a></li>
+                    </ul>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="visible-sm visible-xs">
+              <div class="search-form-container form-group label-floating">
+                <label class="control-label" for="addon1">{{'general.product_search' | translate}}</label>
+                <input id="root-search_products" ng-model="search_query" focus-on="root.search_products" type="text" class="form-control">
+              </div>
+              <div class="clearfix"></div>
+              <div class="form-group pb0">
+                <button class="btn btn-primary btn-raised btn-block mb0" type="button">{{'general.search' | translate}}</button>
+              </div>
+              <div class="form-group mt0">
+                <a href="bootstrap-elements.html" data-target="#" class="btn btn-raised dropdown-toggle btn-block m0" data-toggle="dropdown">
+                  <span ng-bind-html="sort_by_label"></span>
+                  <i class="material-icons material-icons-arrow_drop_down md-24 rotate"></i>
+                </a>
+                <ul class="dropdown-menu full-width">
+                  <li><a ng-click="sort_by($event, 'relevance', false)">{{ 'filter.search.sort_options.relevance' | translate}}</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a ng-click="sort_by($event, 'name', false)">{{ 'filter.search.sort_options.name' | translate}}: {{ 'filter.search.sort_options.a-z' | translate}}</a></li>
+                  <li><a ng-click="sort_by($event, 'name', true)">{{ 'filter.search.sort_options.name' | translate}}: {{ 'filter.search.sort_options.z-a' | translate}}</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a ng-click="sort_by($event, 'price_float', false)">{{ 'filter.search.sort_options.price' | translate}}: {{ 'filter.search.sort_options.low-high' | translate}}</a></li>
+                  <li><a ng-click="sort_by($event, 'price_float', true)">{{ 'filter.search.sort_options.price' | translate}}: {{ 'filter.search.sort_options.high-low' | translate}}</a></li>
+                </ul>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div ng-if="search_products().length > 0">
+        <p class="pb10 text-lighter-2x">
+          {{'filter.search.found' | translate }}
+           {{search_products().length}}
+           {{'filter.search.matching_products' | translate }}
+        </p>
+
+        <div>
+          <div ng-repeat="product in search_products().slice(((currentPage-1)*itemsPerPage), ((currentPage)*itemsPerPage)) | orderBy:sort.attribute:sort.reverse" ng-include="'views/partials/store/templates/product_item_holder.html'"></div>
+        </div>
+
+        <div class="clearfix"></div>
+        <uib-pagination ng-show="(_filtered_products.length-1) > maxSize" total-items="_filtered_products.length-1" ng-model="currentPage" max-size="maxSize" class="pagination" boundary-links="(_filtered_products.length-1) > maxSize" rotate="false" items-per-page="itemsPerPage"></uib-pagination>
+        <div class="clearfix"></div>
+      </div>
+
+      <div class="col-lg-12 pl0 pr0 pt50 pb20" ng-if="search_brands().length > 0">
+        <p class="pb10 text-lighter-2x">
+          {{'filter.search.found' | translate }}
+          {{search_brands().length}}
+          {{'filter.search.matching_brands' | translate }}
+        </p>
+
+        <div class="">
+          <div ng-repeat="brand in search_brands()  | orderBy:sort.attribute:sort.reverse" ng-include="'views/partials/store/templates/brand_holder.html'"></div>
+        </div>
+
+        <div class="clearfix"></div>
+      </div>
+
+      <div class="jumbotron bg-white text-center" ng-if="search_products().length == 0 && search_brands().length == 0">
+        <h2 class="center pt50 pb50">{{'filter.search.no_products_or_brands_found' | translate}}</h2>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="clearfix"></div>

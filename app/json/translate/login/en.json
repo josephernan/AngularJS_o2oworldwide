@@ -1,0 +1,12 @@
+{
+  "login": {
+    "NoAccount" : "Don't have an O2O Worldwide account?",
+    "WrongEmailOrPasswd" : "There was an error with your E-Mail / Phone Number, Password combination. Please try again.",
+    "UnableToConnectServer" : "Unable to connect to O2O servers. Please try again later.",
+    "FailedToConnectServer": "Failed to connect to O2O Servers. Please try again later.",
+    "LoggedIn" : "You are already Logged in.",
+    "LoggedIntoO2O" : "Logged into O2O",
+    
+    "ContinueShopping" :  "Continue Shopping"
+  }
+}

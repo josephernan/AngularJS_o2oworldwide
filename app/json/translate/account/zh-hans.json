@@ -1,0 +1,72 @@
+{
+  "account": {
+    "my_account": "@:top-nav.your-account-dropdown.account",
+    "my_orders": "@:top-nav.your-account-dropdown.orders",
+    "my_commissions": "我的分成",
+    "customers_orders": "@:top-nav.your-account-dropdown.customers_orders",
+    "my_business_center": "我的后台业务管理中心",
+    "my_replicated_site": "我的二级网站",
+    "customize_banners": "编制横幅",
+
+    "no_orders": {
+      "title" : "尚未找到订单",
+      "go_get_some" : "别担心，一般开始都找不到订单",
+      "not_visible" : "环球商网有时需要多达24小时来处理订单，但是您如果登出再重新登入，就有可能看到订单。"
+    },
+
+    "commissions": {
+      "my_commissions": "@:account.my_commissions",
+      "manage": "管理",
+      "products": "商品",
+      "orders": "订单",
+      "gross_revenue": "销售总额",
+
+      "all_time": "您开业以来的全部",
+      "payout": "奖金",
+      "total": "总数",
+      "paid": "已支付",
+      "escro": "监管中",
+      "released": "解除监管",
+
+      "this_period": "这个月",
+      "commissions": "奖金",
+      "total_combine_sales_volume": "全部销售业绩",
+      "which_qualifies_for": "您应得到的奖金",
+      "or": "或者",
+
+      "you_are": "您已经是",
+      "of_the_way_to_earning": "再努力一下您就可以得到"
+    },
+
+    "cust_banners": {
+      "loading_banners": "加载上一个横幅广告",
+      "create_first_banner": "创建您的第一个横幅广告",
+      "click_btn_to_create": "点击下面的按钮来创建您的第一个横幅广告",
+      "create_a_banner": "创建一个横幅广告",
+      "edit": "编辑",
+      "duplicate": "复制",
+      "delete": "删除",
+
+      "id": "用户名",
+      "name": "姓名",
+      "sort_order": "排序",
+      "image_url": "图像URL",
+      "link_url": "链接URL",
+
+      "background_color": "背景颜色",
+      "bgc_format_valid_starts": "以#开始的有效的十六位进制代码",
+      "bgc_format_followed_by": "然后是字母",
+      "bgc_format_or": "或",
+      "bgc_format_and": "和",
+      "bgc_format_letters": "字母",
+
+      "modified": "修改过的",
+
+      "comfirm_delete": "您确定要删除吗？",
+      "cannot_be_undone": "删除后无法还原",
+      "data_and_image_will_be_deleted": "横幅数据和图像将被永久删除",
+
+      "new_banner": "新的主页横幅"
+    }
+  }
+}

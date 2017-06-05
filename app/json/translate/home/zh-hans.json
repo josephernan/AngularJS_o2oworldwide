@@ -1,0 +1,55 @@
+{
+  "home": {
+    "slides": {
+      "1": {
+        "title": {
+          "1": "加盟环球商网导购专家",
+          "2": "开始创业",
+          "3": "向你的朋友、社交网络推介正宗精品"
+        }
+      }
+    },
+    "h2": {
+      "1": "环球商网",
+      "2": "用正宗的精品满足国内消费者的需求"
+    },
+    "how-it-works": {
+      "h2": "系统工作流程",
+      "h4": "一体化的配送系统",
+      "brand_owners": {
+        "h4": "品牌商",
+        "content": "特殊的社交移动电商模式保证了快捷跨境交易、也保证了长期稳固的关系。正式授权的、富有经验的导购专家是产品的最好销售代表。环球商网的网站与配送物流系统高效整合。"
+      },
+      "social_marketers": {
+        "h4": "导购专家",
+        "content": "环球商网的导购专家可以发挥自己的专业优势及人际关系来成功销售100%正宗的精品"
+      },
+      "consumers": {
+        "h4": "客户",
+        "content": "环球商网为客户们奉上来自世界各地的100%原装的品牌产品、便捷的订货和配送程序、最低的零售价格。"
+      }
+    },
+    "social-commerce": {
+      "h2": {
+        "1": "21世纪的社交商务",
+        "2": "富有经验的导购专家帮助推介全球最畅销的原装品牌产品"
+      },
+      "ctas": {
+        "vendor": "在环球商网销售品牌产品",
+        "social_marketer": "成为环球商网导购专家"
+      }
+    },
+    "turnkey": {
+      "h2": "完整的交钥匙社交商务模式和平台",
+      "manage": {
+        "h3": "管理",
+        "content": "环球商网的电商模式让你立即获得正宗欧美品牌产品的销售代理权。你首先选择你想在你自己的网站上展销的产品，然后你自己决定这些产品的销量。在你的客户下了订单后产品将被运到配送中心发到客户手中。环球商网的电商平台让你轻松地设置你的网店、处理订单、开发并维护客户以及许多其他功能。"
+      },
+      "profit": {
+        "h3": "盈利",
+        "content": "Earning a profit is simple with 020 Worldwide. Once a customer places an order on your website, the product is then paid for and the item(s) ship directly to your customers. You keep the profits! It’s that simple. O2O's platform will allow you to complete sales with customers anytime and anywhere through mobile devices and tablets and can work online and offline!"
+      },
+      "cta": "了解更多"
+    }
+  }
+}

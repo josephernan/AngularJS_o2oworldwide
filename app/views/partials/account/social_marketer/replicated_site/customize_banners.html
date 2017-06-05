@@ -1,0 +1,100 @@
+<div ng-if="!loaded_banners" class="row">
+  <div class="col-lg-12">
+    <div class="jumbotron" ng-if="!loaded_banners">
+      <h3 class="extra-large text-center">{{'account.cust_banners.loading_banners' | translate}} ...</h3>
+      <div class="center col-xs-1 pt20 pb50"><spinner></spinner></div>
+    </div>
+  </div>
+</div>
+
+<div ng-if="loaded_banners">
+  <div ng-if="_.size(banners) == 0">
+    <div class="well">
+      <h3 class="h1 extra-large">{{'account.cust_banners.create_first_banner' | translate}}</h3>
+      <p>
+        {{'account.cust_banners.click_btn_to_create' | translate}}
+      </p>
+      <a  class="btn btn-lg btn-success btn-raised">{{'account.cust_banners.create_a_banner' | translate}} <i class="material-icons material-icons-add_a_photo pl15"></i></a>
+    </div>
+  </div>
+
+  <div ng-if="_.size(banners) > 0">
+    <div ng-repeat="banner in banners track by banner.data.id" class="panel panel-default position-relative panel-hover">
+      <div class="abs-top-right-8">
+        <div class="dropdown">
+          <button
+            class="btn btn-default pull-right text-primary p5 m0 dropdown-toggle"
+            type="button" id="dropdownMenu-{{banner.id()}}"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="true"
+            style="vertical-align:middle;">
+            <i class="material-icons material-icons-more_vert md-24 text-lighter-2x rotate-90"></i>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu-{{banner.id()}}">
+            <li class="">
+              <a ng-click="banner_modal('edit', banner)">
+                <i class="material-icons material-icons-edit text-lighter-2x pr10"></i>
+                <span class="text-lighter-1x">{{'account.cust_banners.edit' | translate}}</span>
+              </a>
+            </li>
+            <li>
+              <a ng-click="banner_modal('duplicate', banner)">
+                <i class="material-icons material-icons-content_copy text-lighter-2x pr10"></i>
+                <span class="text-lighter-1x">{{'account.cust_banners.duplicate' | translate}}</span>
+              </a>
+            </li>
+            <li class="">
+              <a ng-click="banner_modal('delete', banner)">
+                <i class="material-icons material-icons-delete text-lighter-2x pr10"></i>
+                <span class="text-lighter-1x">{{'account.cust_banners.delete' | translate}}</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-sm-4 p0 left-panel-img" style="background-image: url('{{banner.src()}}')">
+      </div>
+      <div class="col-sm-8 p0">
+        <div class="panel-heading">
+          <h3 class="overflow-ellipsis strong pr60">{{banner.key()}}</h3>
+        </div>
+        <div class="panel-body table-responsive">
+          <table class="table table-fixed">
+            <tbody>
+              <tr>
+                <td class="no-border-top" width="35%"><strong>{{'account.cust_banners.sort_order' | translate}}</strong></td>
+                <td class="no-border-top" width="55%" class="overflow-ellipsis">{{banner.sort()}}</td>
+              </tr>
+              <tr>
+                <td width="35%"><strong>{{'account.cust_banners.image_url' | translate}}</strong></td>
+                <td width="55%" class="overflow-ellipsis">{{banner.src()}}</td>
+              </tr>
+              <tr>
+                <td width="35%"><strong>{{'account.cust_banners.background_color' | translate}}</strong></td>
+                <td width="55%" class="overflow-ellipsis">
+                  {{banner.background_color()}} &nbsp;
+                  <span class="color-preview" style="background-color:{{banner.background_color()}}"></span>
+                </td>
+              </tr>
+              <tr>
+                <td width="35%"><strong>{{'account.cust_banners.link_url' | translate}}</strong></td>
+                <td width="55%" class="overflow-ellipsis">{{banner.link()}}</td>
+              </tr>
+              <tr>
+                <td width="35%"><strong>{{'account.cust_banners.modified' | translate}}</strong></td>
+                <td width="55%" class="overflow-ellipsis">{{banner.modified() | amDateFormat:'MMMM Do'}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</div>
+
+<button class="btn btn-fab btn-orange fixed-bottom-right dropshadow dropshadow-hover" ng-click="banner_modal('new')">
+  <i class="material-icons material-icons-add md-24"></i>
+</button>

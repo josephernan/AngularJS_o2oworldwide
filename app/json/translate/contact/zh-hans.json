@@ -1,0 +1,29 @@
+{
+  "contact": {
+
+    "mobile": "手机号码",
+    "email": "工作电子邮件",
+    "website": "网站",
+
+    "info": {
+
+      "tyler-wall": {
+        "name": "Tyler Wall",
+        "title": "技术总监 / 首席信息官",
+        "mobile": "+1 (801) 687–8317",
+        "email": "tyler@o2oworldwide.com",
+        "website": "store.o2ohq.com"
+      },
+
+      "jimmy-lu": {
+        "name": "吕健民",
+        "title": "创始人 / 执行总裁",
+        "mobile": "(86) 13328784258",
+        "email": "jlotg@126.com",
+        "website": "store.o2ohq.com"
+      }
+
+    }
+
+  }
+}

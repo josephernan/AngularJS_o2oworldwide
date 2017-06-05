@@ -1,0 +1,20 @@
+<div ng-class="{'panel-success': !!processing_modal.is_processing}">
+  <div class="modal-header panel-heading">
+     <h3 class="modal-title" ng-class="{'text-center': !processing_modal.is_processing}">{{processing_modal.title}}</h3>
+  </div>
+
+  <div class="modal-body clearfix">
+    <div class="col-xs-3 center pt20 pb20"><div spinner></div></div>
+    <div ng-if="!processing_modal.is_processing" class="text-center pt10">
+      <span translate="checkout.auto_redirect_in" translate-value-time="{{processing_modal.redirect_time}}"></span>
+       ...
+     </div>
+  </div>
+
+  <div ng-if="!processing_modal.is_processing" class="modal-footer">
+    <a ng-click="processing_modal.redirect()" class="btn btn-primary">
+      {{'general.continue' | translate}}
+      <i class="fa fa-chevron-circle-right pl5 pt3 pull-right"></i>
+    </a>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+.thumbnail.selected {
+  border: 1px solid #E85100;
+}
+
+.item_quantity {
+  width: 27px;
+  text-align: center;
+  font-size: 11px;
+  display: inline-block;
+}
+
+.product-key-points li {
+  line-height: 1.1em;
+  margin-bottom: 5px;
+}

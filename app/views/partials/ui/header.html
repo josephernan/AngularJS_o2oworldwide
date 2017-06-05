@@ -1,0 +1,144 @@
+<div>
+  <div class="hidden" ng-init="$store.verify_version_number()"></div>
+
+  <div class="navbar navbar-default navbar-fixed-top dropshadow">
+    <!-- <div class="alert alert-info">
+      <h4>We've noticed you're using Android, <strong>try our Mobile app instead?</strong> click here to download</h4>
+    </div> -->
+    <div class="container-fluid">
+
+      <div class="hidden">
+        <ul class="nav navbar-nav navbar-left">
+          <li>
+            <a href="#" class="navbar-left" style="padding-bottom: 7px;">
+              <i class="material-icons material-icons-menu md-24"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="navbar-header">
+        <a id="o2o-top-logo" ui-sref="root.home" class="navbar-brand">
+          <span class="logo">
+            <!-- <span class="beta"></span> -->
+            <span class="alpha"></span>
+          </span>
+        </a>
+
+        <div class="pull-right text-lighter-1x visible-xs">
+          <a class="display-inline text-white p15 pr5"  ui-sref="root.checkout" ngcart-summary summary-type="badge"></i></a>
+          <a class="display-inline text-white p15 pl5" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+            <i class="material-icons material-icons-more_vert md-24" style="height: 20px;line-height: 20px;"></i>
+          </a>
+        </div>
+      </div>
+
+      <nav class="navbar-collapse navbar-responsive-collapse collapse" aria-expanded="true" role="navigation">
+        <ul class="nav navbar-nav">
+          <li class="dropdown">
+            <a data-target="#" class="dropdown-toggle rotate-container" data-toggle="dropdown" aria-expanded="false">
+              <i class="material-icons material-icons-language pr5"></i>
+              {{'top-nav.language.language-selector-label' | translate }}
+              <i class="material-icons material-icons-arrow_drop_down md-24 rotate"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a ng-click="lang.changeLanguage('en')">{{'top-nav.language.en' | translate}}</a></li>
+              <li><a ng-click="lang.changeLanguage('zh-hans')">{{'top-nav.language.zh-hans' | translate}}</a></li>
+            </ul>
+          </li>
+
+          <li ng-if="!$store.user" class="hidden-sm disable-animations"><a data-ui-sref="root.login"><i class="fa fa-sign-in pr10"></i>{{'general.login' | translate}}</a></li>
+          <li ng-if="$store.user" class="hidden-sm disable-animations"><a ng-click="$store.logout()"><i class="fa fa-sign-out pr10"></i> {{'general.logout' | translate}}</a></li>
+          <!-- <li class="hidden-sm"><a ui-sref="root.contact"><i class="material-icons material-icons-help"></i> {{'general.help' | translate}}</a></li> -->
+          <li>
+            <form ng-submit="run_search()" class="navbar-form mb0 no-border" autocomplete="off">
+              <div class="form-group label-floating is-empty">
+                <div class="input-group">
+                  <span class="input-group-btn" style="padding-left: 0px;"><i ng-click="run_search()" class="material-icons material-icons-search md-18 text-white text-lighter-1x"></i></span>
+                  <label class="control-label" for="nav-search-input">{{ 'general.product_search' | translate }}</label>
+                  <input id="nav-search-input" ng-model="search_query" focus-on="root.header.search_bar" type="text" class="form-control col-md-8" aoutocomplete="off" />
+                </div>
+              </div>
+            </form>
+          </li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a id="your-account-dropdown" href="" class="btn dropdown-toggle text-left m0 disable-animations" data-toggle="dropdown" aria-expanded="false">
+
+              <span ng-if="!$store.user" class="nav-line-1 disable-animations">{{'top-nav.your-account-dropdown.line-1' | translate}}</span>
+              <span ng-if="$store.user" class="nav-line-1 disable-animations">{{'top-nav.your-account-dropdown.line-1-logged-in' | translate}} {{$store.user.first_name}}</span>
+
+              <span class="nav-line-2">
+                {{'top-nav.your-account-dropdown.line-2' | translate}}
+                <i class="material-icons material-icons-arrow_drop_down md-24 rotate"></i>
+              </span>
+            </a>
+
+            <ul ng-if="!$store.user" class="dropdown-menu disable-animations" role="menu">
+              <li><a ui-sref="root.login">{{'general.signin' | translate}}<i class="fa fa-sign-in pull-right pr10"></i></a></li>
+              <li><a class="text-small" ui-sref="root.signup">{{'general.register' | translate}}<i class="fa fa-user-plus pull-right"></i></a></li>
+              <li class="divider"></li>
+              <li><a ui-sref="root.login">{{'top-nav.your-account-dropdown.dashboard' | translate}}</a></li>
+              <li><a ui-sref="root.login">{{'top-nav.your-account-dropdown.orders' | translate}}</a></li>
+              <!-- <li><a ng-if="is_mobile_app()" ng-click="scan_barcode()">Scan QR</a></li> -->
+            </ul>
+
+            <ul ng-if="$store.user" class="dropdown-menu" role="menu">
+              <li>
+                <a ui-sref="root.account">{{'top-nav.your-account-dropdown.account' | translate}}
+                  <i class="material-icons material-icons-dashboard md-24 pull-right text-lighter-2x"></i>
+                </a>
+              </li>
+              <li ng-if="$store.user.backoffice_link">
+                <a target="_blank" ng-href="{{$store.user.backoffice_link}}">
+                  {{'top-nav.your-account-dropdown.backoffice' | translate}}
+                  <i class="material-icons material-icons-open_in_new pull-right"></i>
+                </a>
+              </li>
+              <li ng-if="$store.user.is_a('b2')">
+                <a ui-sref="root.account.customer_orders">
+                  {{'top-nav.your-account-dropdown.customers_orders' | translate}}
+                  <span class="badge pull-right ">{{_.size($store.customer_orders)}}</span>
+                </a>
+              </li>
+              <li>
+                <a ui-sref="root.account.my_orders">
+                  {{'top-nav.your-account-dropdown.orders' | translate}}
+                  <span class="badge pull-right">{{_.size($store.orders)}}</span>
+                </a>
+              </li>
+
+              <!-- <li ng-if="$store.user.is_a('b1')"><a ui-sref="root.account.business_center">{{'top-nav.your-account-dropdown.business_center' | translate}} <i class="fa fa-building pull-right"></i></a></li> -->
+
+              <li><a ng-click="toggleModal()">{{'top-nav.your-account-dropdown.qr_code' | translate}} <i class="fa fa-qrcode pull-right"></i></a></li>
+
+              <!-- <li ng-if="is_mobile_app()"><a ng-click="scan_barcode()">Scan QR</a></li> -->
+              <li class="divider"></li>
+              <li><a ng-click="$store.logout()" translate="top-nav.your-account-dropdown.logout" translate-value-name="{{$store.user.first_name}} {{$store.user.last_name}}"></a></li>
+            </ul>
+          </li>
+
+          <li><a ui-sref="root.checkout" class="table-center hidden-xs" ngcart-summary summary-type="badge"></a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <modal id="qr_code" size='' visible="{{showModal}}" parent-visible-attr="showModal">
+    <img class="col-xs-12 img p0" ng-src="{{$store.qr_code_url()}}" alt="">
+    <div class="clearfix"></div>
+    <p class="lead text-center pt20">
+      <small>{{'top-nav.your-account-dropdown.qr_code-share' | translate}}:</small>
+      <br>
+      <strong>{{$store.qr_code_url()}}</strong>
+      <br>
+      <br>
+      <small>{{'top-nav.your-account-dropdown.qr_code-site' | translate}}:</small>
+      <br>
+      <strong>http://{{$store.replicated_url()}}</strong>
+    </p>
+    <div class="clearfix"></div>
+  </modal>
+</div>

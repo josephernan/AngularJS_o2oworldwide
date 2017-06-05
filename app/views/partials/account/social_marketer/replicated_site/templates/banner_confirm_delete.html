@@ -1,0 +1,51 @@
+<div class="panel-danger">
+  <div class="modal-header panel-heading">
+     <h2 class="modal-title pb">{{'account.cust_banners.comfirm_delete' | translate}}</h2>
+  </div>
+  <div class="modal-body">
+    <table class="table table-fixed">
+      <tbody>
+        <tr>
+          <td class="no-border-top" width="35%"><strong>{{'account.cust_banners.id' | translate}}</strong></td>
+          <td class="no-border-top"  width="55%" class="overflow-ellipsis">{{banner.id()}}</td>
+        </tr>
+        <tr>
+          <td width="35%"><strong>{{'account.cust_banners.name' | translate}}</strong></td>
+          <td width="55%" class="overflow-ellipsis">{{banner.name()}}</td>
+        </tr>
+        <tr>
+          <td width="35%"><strong>{{'account.cust_banners.sort_order' | translate}}</strong></td>
+          <td width="55%" class="overflow-ellipsis">{{banner.sort()}}</td>
+        </tr>
+        <tr>
+          <td width="35%"><strong>{{'account.cust_banners.image_url' | translate}}</strong></td>
+          <td width="55%" class="overflow-ellipsis">{{banner.src()}}</td>
+        </tr>
+        <tr>
+          <td width="35%"><strong>{{'account.cust_banners.link_url' | translate}}</strong></td>
+          <td width="55%" class="overflow-ellipsis">{{banner.link()}}</td>
+        </tr>
+        <tr>
+          <td width="35%"><strong>{{'account.cust_banners.background_color' | translate}}</strong></td>
+          <td width="55%" class="overflow-ellipsis">
+            {{banner.background_color()}} &nbsp;
+            <span class="color-preview" style="background-color:{{banner.background_color()}}"></span>
+          </td>
+        </tr>
+        <tr>
+          <td width="35%"><strong>{{'account.cust_banners.modified' | translate}}</strong></td>
+          <td width="55%" class="overflow-ellipsis">{{banner.modified() | amDateFormat:'MMMM Do'}}</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="lead">
+      <strong>{{'account.cust_banners.cannot_be_undone' | translate}}</strong>
+      {{'account.cust_banners.data_and_image_will_be_deleted' | translate}}
+    </p>
+  </div>
+  <div class="modal-footer">
+     <button class="btn btn-danger" type="button" ng-click="ok()">{{'general.ok' | translate}}</button>
+     <button class="btn btn-default" type="button" ng-click="cancel()">{{'general.cancel' | translate}}</button>
+  </div>
+
+</div>

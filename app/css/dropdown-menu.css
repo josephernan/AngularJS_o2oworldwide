@@ -1,0 +1,19 @@
+.dropdown-menu {
+  border-radius: 2px;
+  padding: 8px 0px;
+}
+.dropdown-menu > li {
+  padding: 0 16px;
+  font-size: 14px;
+  height: 48px;
+  line-height: 48px;
+}
+.dropdown-menu > li:hover {
+  background-color: #eee;
+}
+.navbar .dropdown-menu li > a,
+.navbar.navbar-default .dropdown-menu li > a,
+.dropdown-menu > li > a {
+  font-size: 14px;
+  padding: 13px 0px;
+}

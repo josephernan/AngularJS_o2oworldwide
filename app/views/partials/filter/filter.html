@@ -1,0 +1,36 @@
+<div class="container pt50 pb50">
+
+  <div ng-if="filtered_products.length > 0" class="col-lg-12">
+    <h1 class="extra-large pb30">
+      {{category_name()}}
+    </h1>
+
+    <script type="text/ng-template" id="views/partials/store/templates/product_item_holder.html">
+      <div ui-sref="root.product.slug({'sku':product.sku, 'slug':product.slug})" class="uniform-item-container product-item-holder col-md-2 col-sm-3 p5">
+        <div class="product-item mb10">
+          <img class="img-responsive" alt="{{product.images[0].alt}}" ng-src="{{product.images[0].src}}"/>
+        </div>
+        <div class="body text-dark text-center">
+        <h5 ng-bind-html="product.name"></h5>
+          <div class="brand">
+            <a ui-sref="root.brand({brand_id: product.brand.id, brand_name: product.brand.name})">{{ product.brand.name }}</a>
+          </div>
+          <div ng-hide="product.brand.id == 73" class="pt5 text-center text-dark">{{ get_price_str(product.price) }}</div>
+        </div>
+      </div>
+    </script>
+
+    <div
+      ng-repeat="product in filtered_products"
+      ng-include="'views/partials/store/templates/product_item_holder.html'">
+    </div>
+  </div>
+
+  <div ng-if="filtered_products.length == 0" class="pt100 pb100">
+    <h1 class="center extra-large">
+      {{'filter.no_products_found' | translate}} {{category_name()}}</h1>
+  </div>
+
+</div>
+
+<div class="clearfix"></div>

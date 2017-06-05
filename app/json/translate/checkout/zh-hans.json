@@ -1,0 +1,118 @@
+{
+  "checkout": {
+    "my_cart": "我的购物车",
+    "empty": "您的购物车是空的",
+    "product_name": "产品名称",
+    "quantity": "数量",
+    "amount": "单价",
+    "tax": "关税和其他税",
+    "shipping": "快递配送费",
+
+    "checkout": "结算",
+    "personal_details": "您的个人信息",
+    "billing_address": "账单地址",
+    "billing_shipping_adr_same": "送货地址与账单地址相同",
+    "shipping_address": "邮寄地址",
+    "payment": "支付",
+    "your_order": "你的订单",
+
+    "payment_options": {
+      "credit_card": {
+        "label": "信用卡"
+      },
+      "icbc_pay": {
+        "label": "中国工商银行"
+      },
+      "union_pay": {
+        "label": "中国银联",
+        "customers_subject_to": "客户可能会被要求身份验证"
+      },
+      "ali_pay": {
+        "label": "支付宝"
+      },
+      "apple_pay": {
+        "label": "苹果付费"
+      }
+    },
+
+    "things_to_know": {
+      "h3": "友情通告",
+      "body": "收到您订的邮包后，请在七天内确定是否需要退、换货。"
+    },
+
+    "actions": {
+      "buy_again": "再下订单",
+      "product_review": "请留下产品评价",
+      "seller_feedback": "请给品牌商留言",
+      "package_feedback": "请对快递留下评论",
+      "_return": "退换物件",
+      "_return_status": "查看退换、退款处理状态"
+    },
+
+    "your_order_number_is" : "您的订单号",
+    "system_status": "系统订单处理状态",
+    "system_order_id": "系统订单号",
+    "order_link": {
+      "row_title": "订单状态链接",
+      "btn_text": "订单状态",
+      "tooltip": "分享本页或上列链接"
+    },
+    "order_information": "订单信息",
+    "verifying_order_information": "验证订单信息",
+    "no" : "发票号码",
+    "invoice_no" : " 发票号码",
+    "date" : "订单于日期",
+    "items_and_totals": "订单物件及总价",
+    "sku": "商品代码",
+    "item_name": "商品名",
+    "cost": "标价",
+    "subtotal": "订单小计价格",
+    "total": "订单总价",
+    "tracking": "追踪号码",
+
+    "form": {
+      "card_name" : {
+        "label": "卡上姓名",
+        "placeholder": "持卡人姓名"
+      },
+      "card_number" : {
+        "label": "卡号",
+        "placeholder": "卡号"
+      },
+      "card_exp" : {
+        "label": "有效期至",
+        "month": "月份",
+        "year": "年份",
+        "months": {
+          "01": "一月",
+          "02": "二月",
+          "03": "三月",
+          "04": "四月",
+          "05": "五月",
+          "06": "六月",
+          "07": "七月",
+          "08": "八月",
+          "09": "九月",
+          "10": "十月",
+          "11": "十一月",
+          "12": "十二月"
+        }
+      },
+      "card_cvv" : {
+        "label": "卡上CVV号",
+        "placeholder": "安全码（cvv)"
+      }
+    },
+    "place_order": "下单",
+
+    "errors": {
+      "register_failed": "注册用户失败，请稍后再试",
+      "connect_failed": "无法连接到环球商网服务器，请在网速更高时再试",
+      "placing_order_failed": "下单失败，请稍后再试"
+    },
+
+    "processing_order": "订单处理中 ...",
+    "will_be_directed": "转至{{payment_option}}官方网站完成订单处理Y",
+    "auto_redirect_in": "在{{time}}秒钟内，您将被自动转至支付方官方网站完成支"
+  }
+}

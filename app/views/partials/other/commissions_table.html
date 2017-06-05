@@ -1,0 +1,47 @@
+<div class="container pb50">
+  <div class="row">
+    <div class="col-md-7 center">
+      <h1 class="border-left-orange extra-large mb20">{{'commissions' | translate }}</h1>
+      <div class="panel panel-orange">
+        <div class="panel-heading">
+          <h1 class="">{{'calculator.calculator' | translate}}</h1>
+        </div>
+        <div class="panel-body text-2x">
+            <div class="form-group label-floating is-empty col-md-6 center pt30">
+              <div class="input-group">
+                <span class="input-group-addon">¥</span>
+                <label class="control-label">{{'calculator.if_I_sell' | translate}}...</label>
+                <input class="form-control" ng-model="commissions_table_test_input" ng-keyup="calc_commission()">
+                <p class="help-block display-block text-lighter-2x">{{'calculator.enter_help' | translate}}.</p>
+              </div>
+            </div>
+            <h3 class="text-2x text-center pb20">
+              <small class="text-tiny text-lighter-2x">{{'calculator.then' | translate}}</small> <br>
+              <strong class="text-primary">{{commission_value | number:2}}¥</strong>
+              <small>(<strong>{{commissions_percentage}}%)</strong></small>
+            </h3>
+        </div>
+      </div>
+     <div class="panel panel-orange">
+        <div class="panel-heading">
+          <h2 class="h1">{{'table.table' | translate}}</h2>
+        </div>
+        <div class="panel-body">
+          <div class="table-responsive">
+            <table class="table table-striped table-hover table-condensed center">
+              <thead>
+                <th>{{'table.pct' | translate}}</th>
+                <th>{{'table.total_price' | translate}}</th></thead>
+              <tbody class="text-lighter-1x">
+                <tr ng-repeat="(percentage, upper_bound) in $store.commissions_table">
+                  <td class="text-lighter-1x">{{percentage}}%</td>
+                  <td class="text-lighter-1x">{{get_bounds($index, upper_bound)}}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

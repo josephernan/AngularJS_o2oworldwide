@@ -1,0 +1,27 @@
+<div id="sidebar-nav" >
+  <div class="nav btn-group-vertical text-left">
+    <a class="btn btn-primary dark btn-raised" ui-sref-active-eq="active" ui-sref="root.account">{{'account.my_account' | translate}}</a>
+    <a ng-if="::$store.user.is_a('b2')" ui-sref-active="active" class="btn btn-white btn-raised" ui-sref="root.account.commissions">{{'account.my_commissions' | translate}}</a>
+    <a ng-if="::$store.user.is_a('b2')" ui-sref-active="active" class="btn btn-white btn-raised" ui-sref="root.account.customer_orders">{{'account.customers_orders' | translate}}</a>
+    <a class="btn btn-white btn-raised" ui-sref-active="active" ui-sref="root.account.my_orders">{{'account.my_orders' | translate}}</a>
+    <!-- <a ng-if="$store.user.is_a('b1')" class="btn btn-white btn-raised" ui-sref="root.account.business_center">{{'account.my_business_center' | translate}}</a> -->
+
+    <!-- <a ng-if="::$store.user.is_a('b2')" class="btn btn-success dark btn-raised" ui-sref="root.account.replicated_site">{{'account.my_replicated_site' | translate}}</a>
+    <a ng-if="::$store.user.is_a('b2')" class="btn btn-white btn-raised" ui-sref-active="active" ui-sref="root.account.replicated_site.customize_banners">{{'account.customize_banners' | translate}}</a> -->
+  </div>
+</div>
+
+<script type="text/javascript">
+  if (window.innerWidth > 768) {
+    $(function() {
+      $('#sidebar-nav').affix({
+        offset: {
+          bottom: ($('footer').outerHeight(true) +
+                  $('.application').outerHeight(true)) +
+                  40,
+          top: $('#sidebar-nav').offset().top
+        }
+      });
+    });
+  }
+</script>

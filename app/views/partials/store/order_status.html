@@ -1,0 +1,215 @@
+<div class="row">
+  <div ng-if="!orders_fetched" class="pb20">
+    <h3 class="extra-large text-center">{{ 'checkout.verifying_order_information' | translate }} ...</h3>
+    <div class="center col-xs-1 pt20 pb50"><spinner></spinner></div>
+  </div>
+
+  <div ng-if="orders_fetched">
+
+    <!-- <div ng-if="show_controls" style="position: absolute; top: 5px; right: 25px;">
+      <div class="pb5">
+        <a ng-click="move_order_status(-1)" class="btn btn-default btn-raised mb0"><i class="fa fa-arrow-circle-left"></i></a>
+        <a ng-click="move_order_status(+1)" class="btn btn-default btn-raised mb0"><i class="fa fa-arrow-circle-right"></i></a>
+      </div>
+      <div>
+        <a ng-click="move_order_status(-1, true)" class="btn btn-success btn-raised mt0"><i class="fa fa-arrow-circle-left"></i></a>
+        <a ng-click="move_order_status(+1, true)" class="btn btn-success btn-raised mt0"><i class="fa fa-arrow-circle-right"></i></a>
+      </div>
+    </div> -->
+
+    <div class="col-lg-12">
+      <h1 class="extra-large mt0" ng-bind-html="order_status"></h1>
+
+      <div ng-if="progress_visible" class="pt5 pb10">
+        <div class="progress">
+          <div
+            id="order-progress"
+            class="progress-bar progress-bar-success {{progress_class}}"
+            ng-class="{'progress-bar-striped' : progress_striped, 'active' : progress_active}"
+            role="progressbar"
+            aria-valuenow="{{order.order_status_id}}"
+            aria-valuemin="0"
+            aria-valuemax="110"
+            style="width: {{ order.order_status_id / 1.1 }}%"
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-5 pb20 btn-group-vertical text-left m0">
+      <a ng-if="show_action.buy_again" ng-click="toggleModal()" class="btn btn-primary btn-raised" >{{ 'checkout.actions.buy_again' | translate }}<i class="fa fa-chevron-circle-right pull-right"/></a>
+      <!-- <a ng-if="show_action.leave_review" class="btn btn-default btn-raised">{{ 'checkout.actions.product_review' | translate }}<i class="fa fa-chevron-circle-right pull-right"/></a>
+      <a ng-if="show_action.seller_feedback" href="" class="btn btn-default btn-raised">{{ 'checkout.actions.seller_feedback' | translate }}<i class="fa fa-chevron-circle-right pull-right"/></a>
+      <a ng-if="show_action.package_feedback" href="" class="btn btn-default btn-raised">{{ 'checkout.actions.package_feedback' | translate }}<i class="fa fa-chevron-circle-right pull-right"/></a> -->
+      <a ng-if="show_action._return" ui-sref="root.rma({order_id: order.id})" class="btn btn-default btn-raised">{{ 'checkout.actions._return' | translate }}<i class="fa fa-chevron-circle-right pull-right text-lighter-2x"/></a>
+      <a ng-if="show_action._return_status" ui-sref="root.rma.status({order_id: order.id})" class="btn btn-default btn-raised">{{ 'checkout.actions._return_status' | translate }}<i class="fa fa-chevron-circle-right pull-right text-lighter-2x"/></a>
+    </div>
+
+    <div ng-if="show_things_to_know" class="col-sm-7 pb20">
+      <h3 class="extra-large text-light mt0">{{ 'checkout.things_to_know.h3' | translate }}</h3>
+      <p class="lead pb20 text-larger text-light">
+        {{ 'checkout.things_to_know.body' | translate }}
+      </p>
+    </div>
+
+    <div class="clearfix pb20"></div>
+
+    <style media="screen">
+      .ellipsis.active {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        display: block;
+      }
+      .order-information-table {
+        table-layout: fixed;
+      }
+      :lang(en) .order-information-table td:first-child {
+        width: 11em;
+      }
+      :lang(zh) .order-information-table td:first-child {
+        width: 9em;
+      }
+      .order-information-table td:last-child {
+        word-wrap: break-word;
+      }
+    </style>
+
+    <div class="col-md-12">
+      <legend><h2>{{ 'checkout.order_information' | translate }}</h2></legend>
+
+      <table class="order-information-table table table-bordered col-lg-12 p0">
+        <tbody>
+          <tr>
+            <td class="pr20 col-xs-4"><strong>{{ 'checkout.invoice_no' | translate }}</strong></td>
+            <td>{{::order.invoice_no}}</td>
+          </tr>
+          <tr>
+            <td class="pr20 col-xs-4"><strong>{{ 'checkout.date' | translate }}</strong></td>
+            <td>{{order.created | amDateFormat:'MMMM Do'}}</td>
+          </tr>
+          <tr>
+            <td class="pr20 col-xs-4"><strong>{{ 'checkout.system_status' | translate }}</strong></td>
+            <td><code>{{'order_status.short.' + order.order_status | translate}}</code></td>
+          </tr>
+          <tr>
+            <td class="pr20 col-xs-4"><strong>{{ 'checkout.system_order_id' | translate }}</strong></td>
+            <td>{{::order.id}}</td>
+          </tr>
+          <tr ng-click="toggle_status_link()">
+            <td class="pr20 col-xs-4"><strong>{{ 'checkout.order_link.row_title' | translate }}</strong></td>
+            <td>
+              <span id="order_link-ellipsis" class="ellipsis active blue-anchor no-link">{{::order.order_link}}</span>
+              <div id="order_link-full" style="display: none;">
+                <span id="full_order_link"class="blue-anchor">{{::order.order_link}}</span>
+                <br />
+                <a
+                  id="full_order_link-button"
+                  ng-href="{{order.order_link}}"
+                  target="_blank"
+                  class="btn btn-sm btn-default mt10"
+                  >
+                    {{ 'checkout.order_link.btn_text' | translate }}
+                    <i class="material-icons material-icons-open_in_new mt-2"/>
+                  </a>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="pr20 col-xs-4"><strong>{{ 'general.form.fname.label' | translate }}</strong></td>
+            <td>{{::order.first_name}}</td>
+          </tr>
+          <tr>
+            <td class="pr20 col-xs-4"><strong>{{ 'general.form.lname.label' | translate }}</strong></td>
+            <td>{{::order.last_name}}</td>
+          </tr>
+          <tr>
+            <td class="pr20 col-xs-4"><strong>{{ 'general.form.email.label' | translate }}</strong></td>
+            <td>{{::order.email}}</td>
+          </tr>
+          <tr>
+            <td class="pr20 col-xs-4"><strong>{{ 'general.form.phone.label' | translate }}</strong></td>
+            <td>{{::order.phone}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-md-4">
+      <legend><h3>{{ 'checkout.billing_address' | translate }}</h3></legend>
+      <address class="">
+        <strong>{{::order.billing_firstname}} {{::order.billing_lastname}}</strong> <br>
+        {{::order.billing_address_1}} {{::order.billing_address_2}} <br>
+        {{::order.billing_city}} {{::order.billing_zone}}, {{::order.billing_country}} <br>
+        {{::order.billing_zipcode}}
+      </address>
+    </div>
+    <div class="col-md-4">
+      <legend><h3>{{ 'checkout.shipping_address' | translate }}</h3></legend>
+      <address class="">
+        <strong>{{::order.shipping_firstname}} {{::order.shipping_lastname}}</strong> <br>
+        {{::order.shipping_address_1}} {{::order.shipping_address_2}} <br>
+        {{::order.shipping_city}} {{::order.shipping_zone}}, {{::order.shipping_country}} <br>
+        {{::order.shipping_zipcode}}
+      </address>
+    </div>
+    <div class="col-md-12">
+      <legend><h3>{{ 'checkout.items_and_totals' | translate }}</h3></legend>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <td>{{ 'checkout.sku' | translate }}</td>
+            <td>{{ 'checkout.item_name' | translate }}</td>
+            <td>{{ 'checkout.cost' | translate }}</td>
+            <td>{{ 'checkout.quantity' | translate }}</td>
+            <td>{{ 'checkout.total' | translate }}</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="item in ::order.products">
+            <td>{{item.product.sku}}</td>
+            <td>
+              <img ng-src="{{item.product.images[0].src}}" ng-alt="{{item.product.images[0].alt}}" class="img-responsive col-sm-4 p0">
+              <p>
+                <strong ng-bind-html="get_lang_attr(item.product, 'name')"></strong> <br>
+                <small>{{'general.by' | translate}} <a href="#">{{brand_meta(item.product.brand.id, 'name')}}</a></small>
+              </p>
+            </td>
+            <td>{{get_price_str(item.product.price)}}</td>
+            <td>{{(item.quantity > 0) ? item.quantity : 1}}</td>
+            <td>{{get_price_str(item.product.price * ((item.quantity > 0) ? item.quantity : 1))}}</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td></td>
+            <td></td>
+            <td><strong>{{ 'checkout.total' | translate }}:</strong></td>
+            <td><strong>{{order.products.length}}</strong></td>
+            <td><strong>{{get_price_str(order.total)}}</strong></td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+</div>
+
+<modal id="buy-again_model" size='lg' title="{{ 'checkout.actions.buy_again' | translate }}" visible="{{showModal}}" parent-visible-attr="showModal">
+  <div ng-repeat="item in order.products">
+    <div class="row">
+      <img ng-src="{{item.product.images[0].src}}" ng-alt="{{item.product.images[0].alt}}" class="img-responsive col-sm-4 p0">
+      <div class="col-sm-3 text-larger">
+        <strong data-dismiss="modal" ng-click="$state.go('root.product.slug', {'sku':item.product.sku, 'slug':item.product.slug})" ng-bind-html="item.product.name"></strong> <br>
+        <small ng-if="item.product.brand.name">by  <a data-dismiss="modal" ui-sref="root.brand({brand_id: item.product.brand.id, brand_name: brand_meta(item.product.brand.id, 'name')})">{{item.product.brand.name}}</a></small>
+      </div>
+      <div class="col-sm-5">
+        <div data-dismiss="modal" ngcart-addtocart product="item.product" quantity="1" class="center" click_state="root.checkout"></div>
+      </div>
+    </div>
+    <div class="row">
+      <hr/ >
+    </div>
+    <div class="clearfix"></div>
+  </div>
+</modal>

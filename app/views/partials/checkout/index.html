@@ -1,0 +1,19 @@
+<div class="checkout checkout-index">
+  <div class="container pb50">
+    <h1 class="border-left-orange extra-large mb20">{{'checkout.my_cart' | translate}}</h1>
+    <div ng-if="$cart.getTotalItems()>0">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <div ngcart-cart></div>
+        </div>
+      </div>
+      <div ng-if="$cart.getTotalItems()>0" class="col-lg-12">
+        <a ui-sref="root.checkout.info()" class="btn btn-orange btn-raised btn-lg pull-right">{{'general.checkout' | translate}} <i class="fa fa-chevron-circle-right pl5"></i></a>
+      </div>
+    </div>
+
+    <div ng-if="$cart.getTotalItems() <= 0" class="alert alert-orange dropshadow" role="alert">
+        {{'checkout.empty' | translate}}
+    </div>
+  </div>
+</div>

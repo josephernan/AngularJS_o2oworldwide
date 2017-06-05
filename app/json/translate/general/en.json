@@ -1,0 +1,205 @@
+{
+  "general": {
+    "o2o_hq": "O2O HQ",
+    "social_marketer": "Social Marketer",
+    "b2": "Social Marketer",
+    "brand": "Brand",
+    "brand_owner": "Brand Owner",
+    "b1": "Brand Owner",
+    "ok": "Ok",
+    "save": "Save",
+    "cancel": "Cancel",
+    "by": "by",
+    "close": "Close",
+    "signup": "Signup",
+    "register": "Register",
+    "help": "Help",
+    "signin": "Sign in",
+    "login": "Login",
+    "logout": "Logout",
+    "search": "Search",
+    "product": "Product",
+    "products": "Products",
+    "product_search": "Product Search ...",
+    "created": "Created",
+    "modified": "Modified",
+    "submit": "Submit",
+    "checkout": "Checkout",
+    "continue": "Continue",
+    "cart": "Cart",
+    "add_to_cart": "Add to Cart",
+    "update_cart": "Update Cart",
+    "remove_from_cart": "Remove from Cart",
+    "quantity": "Qty:",
+    "categories": "Categories",
+    "required": "Required",
+    "not_required": "Not Required",
+    "error": "Error",
+    "success": "Success",
+    "form": {
+      "error": {
+        "general": "Please fix the errors above.",
+        "required": "Please provide the required fields highlighted above."
+      },
+      "company_name": {
+        "label": "Company Name",
+        "placeholder": "Name of Company"
+      },
+      "name": {
+        "label": "Name",
+        "placeholder": "Name",
+        "error_required": "Name is Required."
+      },
+      "fname": {
+        "label": "First Name",
+        "placeholder": "First Name",
+        "error_required": "First Name is Required."
+      },
+      "lname": {
+        "label": "Last Name",
+        "placeholder": "Last Name",
+        "error_required": "Last Name is Required."
+      },
+      "phone": {
+        "label": "Phone Number",
+        "placeholder": "Phone Number",
+        "error_required": "Phone Number is Required.",
+        "error_tel": "Please Enter a valid Phone Number."
+      },
+      "email": {
+        "label": "Email Address",
+        "placeholder": "Email Address",
+        "error_required": "Email Address is Required.",
+        "error_email": "Please Enter a valid Email Address."
+      },
+      "username": {
+        "label": "Username",
+        "placeholder": "Desired Username",
+        "error_required": "Username is Required."
+      },
+      "password": {
+        "label": "Password",
+        "placeholder": "Desired Password",
+        "error_required": "Password is Required."
+      },
+      "password_confirm": {
+        "label": "Confirm Password",
+        "placeholder": "Confirm Password",
+        "error_required": "Confirm Password is Required."
+      },
+
+      "address1": {
+        "label": "Address 1",
+        "placeholder": "Address 1"
+      },
+      "address2": {
+        "label": "Address 2",
+        "placeholder": ""
+      },
+      "city": {
+        "label": "City",
+        "placeholder": "City"
+      },
+      "state": {
+        "label": "Province/State"
+      },
+      "country": {
+        "label": "Country",
+        "placeholder": "Country"
+      },
+      "postal_code": {
+        "label": "Postal Code",
+        "placeholder": "Postal Code",
+        "error_required": "Postal Code is Required."
+      },
+
+      "seccond_id_number": {
+        "label": "2nd Generation Identification Number",
+        "placeholder": "2nd Generation ID Number",
+        "error_required": "Id is Required."
+      },
+
+      "toc_agreement": {
+        "label": "I agree to the O2O Worldwide",
+        "link": "terms & conditions",
+        "error_required": "Please accecpt the Terms and Conditions."
+      },
+
+      "cta1": "Continue",
+      "cta2": "Submit",
+      "general_error": "Please fix the errors above",
+      "privacy": {
+        "pre": "Your",
+        "link_text": "Privacy",
+        "post": "is Protected"
+      }
+    },
+    "errors": {
+      "login_required": "You must be logged in to access this resource.",
+      "no_order_found_for_id": "No order found for Order ID"
+    }
+  },
+  "top-nav": {
+    "toggle-nav": "Toggle navigation",
+    "language": {
+      "language-selector-label": "Language: English",
+      "en": "English",
+      "zh-hans": "Simp. Chinese (简体中文)"
+    },
+    "sell-link": "Sell on O2O",
+    "your-account-dropdown": {
+      "line-1": "Hello. Sign in",
+      "line-1-logged-in": "Hello,",
+      "line-2": "Your Account",
+      "account": "Your Account",
+      "new-on-o2o": "New on O2O?",
+      "start-here": "Start here",
+      "marketer": "Your Social Marketer",
+      "backoffice": "Your Backoffice",
+      "dashboard": "Your Dashboard",
+      "customers_orders": "Customer's Orders",
+      "orders": "Your Orders",
+      "business_center": "Your Business Center",
+      "qr_code": "My QR Code",
+      "qr_code-share": "QR Code share URL",
+      "qr_code-site": "My site URL",
+      "messages": "Your Messages",
+      "logout": "Not {{ name }}? Sign Out"
+    }
+  },
+  "footer": {
+    "signup": {
+      "h3": "NEWS & UPDATES",
+      "p": "KEEP ME IN THE LOOP OF NEW PRODUCT UPDATES",
+      "email-placeholder": "Email Address",
+      "error_email": "Please provide a valid Email Address",
+      "error_required": "Please provide an Email Address",
+      "submit_success": "Successfully Signed up for O2O News and Updates. Thank You."
+    },
+    "links": {
+      "1": {
+        "title": "Company",
+        "home": "Home",
+        "about": "About",
+        "join": "Join Now",
+        "products": "Products",
+        "contact": "Contact"
+      },
+      "2": {
+        "title": "Associates",
+        "join": "Join Now",
+        "support": "Customer Support",
+        "request_brands": "Request Brands",
+        "toc": "Terms & Conditions"
+      }
+    },
+    "rights": "All Rights Reserved",
+    "icp" : "ICP: 15016859"
+  },
+  "notify" : {
+    "success" : {
+      "login_fetched" : "Successfully Logged in {{name}}.",
+      "logged_out" : "Successfull Logged Out."
+    }
+  }
+}

@@ -1,0 +1,38 @@
+<div itemscope itemtype="http://purl.org/goodrelations/v1#Brand" class="container-fluid" itemid="#{{::brand.name.stringToSlug()}}">
+
+  <div ng-if="brand_loading === 1" class="mb50">
+    <div class="jumbotron bg-white">
+      <div class="">
+        <h1 itemprop="name" class="extra-large text-center">{{brand.name}}</h1>
+        <link class="hidden" itemprop="http://xmlns.com/foaf/0.1/page" href="{{::window.location.href}}" />
+        <div class="center col-xs-1 pt20 pb50"><spinner></spinner></div>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+  <div ng-if="brand_loading === 2" class="pb50">
+    <img ng-src="{{::$store.site_url(brand_meta(brand.id, 'logo'))}}" alt="{{::brand.name}}" class="img img-responsive col-md-6 pt10 mb30 mt20">
+
+    <div ng-if="$store.user && !$store.user.is_a('b2') && brand_meta(brand.id, 'c_about')" class="col-md-12" >
+      <h2 class="extra-large">About {{::brand.name}} <small>Customer</small></h2>
+      <div itemprop="description" ng-bind-html="brand_meta(brand.id, 'c_about')"></div>
+    </div>
+
+    <div ng-if="$store.user && !$store.user.is_a('b2') && brand_meta(brand.id, 'sm_about')" class="col-md-12">
+      <h2 class="extra-large">About {{::brand.name}} <small>Social Marketer</small></h2>
+      <div itemprop="description" ng-bind-html="brand_meta(brand.id, 'sm_about')"></div>
+    </div>
+    <div class="clearfix"></div>
+
+    <did class="col-md-12 pb50">
+      <legend><h2 class="extra-large mb20">{{::brand.name}} {{'general.products' | translate}}</h2></legend>
+
+      <div class="pb10">
+        <div ng-repeat="product in $store.products | filter : filters : true" ng-include="'views/partials/store/templates/product_item_holder.html'"></div>
+      </div>
+    </did>
+
+  </div>
+</div>
+
+<div class="clearfix"></div>

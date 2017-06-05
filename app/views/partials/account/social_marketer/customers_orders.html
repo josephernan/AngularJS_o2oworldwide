@@ -1,0 +1,43 @@
+<section id="customer_orders" ng-if="!!$store.customer_orders && _.size($store.customer_orders) > 0">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <p class="m0 text-3x">{{'account.customers_orders' | translate}}</p>
+    </div>
+
+    <div class="panel-body p0">
+      <div class="table-responsive">
+        <table datatable="" dt-options="dtOptions" class="table table-hover">
+          <thead class="">
+            <tr>
+              <th width="10%" class="withripple">{{ 'checkout.no' | translate }}</th>
+              <th class="withripple">{{ 'checkout.system_status' | translate }}</th>
+              <th class="withripple hidden-sm hidden-xs">{{'general.form.name.label' | translate}}</th>
+              <th class="withripple">{{ 'checkout.total' | translate }}</th>
+              <th class="withripple hidden-sm hidden-xs">{{'checkout.tracking' | translate}}</th>
+              <th width="10%" class="withripple">{{ 'general.created' | translate }}</th>
+            </tr>
+          </thead>
+          <tbody class="">
+            <tr class="withripple" ng-repeat="order in ::$store.customer_orders" ui-sref="root.account.order({order_id:order.id})">
+              <td>{{::order.invoice_no}}</td>
+              <td>{{'order_status.short.' + order.order_status | translate}}</td>
+              <td class="hidden-sm hidden-xs">{{::order.first_name}} {{::order.last_name}}</td>
+              <td>{{get_price_str(order.total)}}</td>
+              <td class="hidden-sm hidden-xs">{{::order.tracking}}</td>
+              <td class="">{{order.created | amDateFormat:'MM/DD'}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div ng-if="_.size($store.customer_orders) == 0 && $state.current.name === 'root.account.customer_orders'">
+  <div class="well">
+    <h1 class="extra-large text-lighter-1x">{{'account.no_orders.title' | translate}}</h1>
+    <p class="lead text-2x text-lighter-2x">{{'account.no_orders.go_get_some' | translate}}</p>
+    <p class="text-large text-lighter-3x"><em>{{'account.no_orders.not_visible' | translate}}</em></p>
+  </div>
+</div>

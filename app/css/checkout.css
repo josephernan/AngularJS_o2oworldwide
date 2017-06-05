@@ -1,0 +1,11 @@
+.checkout.checkout-index .tax,
+.checkout.checkout-index .taxes,
+.checkout.checkout-index .shipping,
+.checkout.checkout-index .total {
+  display: none;
+}
+
+.checkout.checkout-index .subtotal,
+.checkout.checkout-info .total {
+  font-weight: bold;
+}

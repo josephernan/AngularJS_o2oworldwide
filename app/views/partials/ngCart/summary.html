@@ -1,0 +1,11 @@
+<div ng-class="{'nav-cart-1': ngCart.getTotalItems()<10, 'nav-cart-10': (ngCart.getTotalItems()>=10 && ngCart.getTotalItems()<100), 'nav-cart-100': ngCart.getTotalItems()>=100}"
+  class="nav-cart-cart">
+
+  {{ngCart.getTotalItemsForSummary()}}
+</div>
+<img class="nav-cart-icon" alt="Shopping Cart Icon" src="assets/images/header/icon_shopping_cart.png">
+<div class="display-inline">
+  <span class="nav-line-1">&nbsp;</span>
+  <span class="nav-line-2 hidden-xs">{{'general.cart' | translate}}
+    <!--<i class="fa fa-caret-down"></i>--></span>
+</div>

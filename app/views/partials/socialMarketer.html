@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="container">
+    <h1 class="extra-large">{{marketer.first_name}} {{marketer.last_name}}</h1>
+  </div>
+  <hr>
+  <div class="clearfix"></div>
+  <div class="col-xs-12" ng-bind-html="about"></div>
+  <div class="clearfix"></div>
+  <hr>
+  <div class="col-xs-12">
+    <h2 class="extra-large mb20">Official Social Marketer Information</h2>
+
+    <div class="col-md-6">
+      <legend>{{marketer.first_name}}'s Contact Information</legend>
+      <table class="text-large table-condensed table-hover table-striped">
+        <tbody>
+          <tr>
+            <td class="text-right bold pr10">Code:</td>
+            <td><strong><code>{{marketer.username | uppercase}}</code></strong></td>
+          </tr>
+          <tr>
+            <td class="text-right bold pr10">Name:</td>
+            <td>{{marketer.first_name}} {{marketer.last_name}}</td>
+          </tr>
+          <tr>
+            <td class="text-right bold pr10">Email:</td>
+            <td>{{marketer.email | lowercase}}</td>
+          </tr>
+          <tr>
+            <td class="text-right bold pr10">Phone:</td>
+            <td>{{marketer.phone | tel}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <br>
+</div>
+<div class="clearfix"></div>

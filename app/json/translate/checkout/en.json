@@ -1,0 +1,118 @@
+{
+  "checkout": {
+    "my_cart": "My Cart",
+    "empty": "Your cart is empty",
+    "product_name": "Product Name",
+    "quantity": "Quantity",
+    "amount": "Amount",
+    "tax": "Duties & Taxes",
+    "shipping": "Shipping",
+
+    "checkout": "Checkout",
+    "personal_details": "Your Personal Details",
+    "billing_address": "Billing Address",
+    "billing_shipping_adr_same": "My delivery and billing addresses are the same",
+    "shipping_address": "Shipping Address",
+    "payment": "Payment",
+    "your_order": "Your Order",
+
+    "payment_options": {
+      "credit_card": {
+        "label": "Credit Card"
+      },
+      "icbc_pay": {
+        "label": "ICBC"
+      },
+      "union_pay": {
+        "label": "Union Pay",
+        "customers_subject_to": "Customers may be subject to a one time verification process."
+      },
+      "ali_pay": {
+        "label": "AliPay"
+      },
+      "apple_pay": {
+        "label": "Apple Pay"
+      }
+    },
+
+    "things_to_know": {
+      "h3": "There are a few things you should know...",
+      "body": "Now that your order has been delivered, you've got 7 days to let us know if you need to return or replace items."
+    },
+
+    "actions": {
+      "buy_again": "Buy it Again",
+      "product_review": "Write a product Review",
+      "seller_feedback": "Leave seller feedback",
+      "package_feedback": "Leave package feedback",
+      "_return": "Return or replace items",
+      "_return_status": "View return/refund status"
+    },
+
+    "your_order_number_is" : "Your Order Number is",
+    "system_status": "System Order Status",
+    "system_order_id": "System Order ID",
+    "order_link": {
+      "row_title": "Order Status Link",
+      "btn_text": "Order Status",
+      "tooltip": "Share this page, or the link above"
+    },
+    "order_information": "Order Infromation",
+    "verifying_order_information": "Verifying Order Information",
+    "no" : "No.",
+    "invoice_no" : "Invoice Number",
+    "date" : "Order Placed On",
+    "items_and_totals": "Items & Totals",
+    "sku": "SKU",
+    "item_name": "Item Name",
+    "cost": "Cost",
+    "subtotal": "Subtotal",
+    "total": "Total",
+    "tracking": "Tracking",
+
+    "form": {
+      "card_name" : {
+        "label": "Name on Card",
+        "placeholder": "Card Holder's Name"
+      },
+      "card_number" : {
+        "label": "Card Number",
+        "placeholder": "Card Number"
+      },
+      "card_exp" : {
+        "label": "Expiration Date",
+        "month": "Month",
+        "year": "Year",
+        "months": {
+          "01": "Jan",
+          "02": "Feb",
+          "03": "Mar",
+          "04": "Apr",
+          "05": "May",
+          "06": "June",
+          "07": "July",
+          "08": "Aug",
+          "09": "Sep",
+          "10": "Oct",
+          "11": "Nov",
+          "12": "Dec"
+        }
+      },
+      "card_cvv" : {
+        "label": "Card CVV",
+        "placeholder": "Security Code (cvv)"
+      }
+    },
+    "place_order": "Place Order",
+
+    "errors": {
+      "register_failed": "Failed to register user – please try again later.",
+      "connect_failed": "Failed to connect to the O2O Servers. Please try again when you have a better internet connection.",
+      "placing_order_failed": "Failed to place your order. Please try again later."
+    },
+
+    "processing_order": "Processing Order ...",
+    "will_be_directed": "You will be redirected to the {{payment_option}} website to complete payment for this order.",
+    "auto_redirect_in": "You will be automatically redirected in {{time}} secconds"
+  }
+}

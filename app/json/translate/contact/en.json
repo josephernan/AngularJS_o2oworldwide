@@ -1,0 +1,29 @@
+{
+  "contact": {
+
+    "mobile": "Mobile",
+    "email": "Work E-Mail",
+    "website": "Website",
+
+    "info": {
+
+      "tyler-wall": {
+        "name": "Tyler Wall",
+        "title": "Director of Technology / CIO",
+        "mobile": "+1 (801) 687–8317",
+        "email": "tyler@o2oworldwide.com",
+        "website": "store.o2ohq.com"
+      },
+
+      "jimmy-lu": {
+        "name": "Jimmy Lu",
+        "title": "Founder / CEO",
+        "mobile": "+1 (801) 792–7716",
+        "email": "jimmy.lu@o2oworldwide.com",
+        "website": "store.o2ohq.com"
+      }
+
+    }
+
+  }
+}

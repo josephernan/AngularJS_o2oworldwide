@@ -1,0 +1,14 @@
+{
+  "commissions": "佣金",
+  "table": {
+    "table": "佣金表",
+    "pct": "百分比",
+    "total_price": "总价格"
+  },
+  "calculator": {
+    "calculator": "计算",
+    "if_I_sell": "如果我可以销售",
+    "then": "那么我可以赚到",
+    "enter_help": "请输入销售总额，以便查询您所得的佣金"
+  }
+}

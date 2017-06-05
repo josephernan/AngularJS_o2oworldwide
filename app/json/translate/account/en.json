@@ -1,0 +1,72 @@
+{
+  "account": {
+    "my_account": "@:top-nav.your-account-dropdown.account",
+    "my_orders": "@:top-nav.your-account-dropdown.orders",
+    "my_commissions": "My Commissions",
+    "customers_orders": "@:top-nav.your-account-dropdown.customers_orders",
+    "my_business_center": "My Business Center",
+    "my_replicated_site": "My Replicated Site",
+    "customize_banners": "Customize Banners",
+
+    "no_orders": {
+      "title" : "No Orders found yet",
+      "go_get_some" : "Don't worry, everyone starts out with no orders.",
+      "not_visible" : "It takes O2O 24hrs to fully process orders — but you might be able to see an order that was just placed if you logout and log back in?"
+    },
+
+    "commissions": {
+      "my_commissions": "My Commissions",
+      "manage": "Manage",
+      "products": "Products",
+      "orders": "Orders",
+      "gross_revenue": "Gross Revenue",
+
+      "all_time": "All Time",
+      "payout": "Payout",
+      "total": "Total",
+      "paid": "Paid",
+      "escro": "Escro",
+      "released": "released",
+
+      "this_period": "This Period",
+      "commissions": "Commissions",
+      "total_combine_sales_volume": "Total Combine Sales Volume",
+      "which_qualifies_for": "Which qualifies for a payout of",
+      "or": "or",
+
+      "you_are": "You are",
+      "of_the_way_to_earning": "of the way towards earning"
+    },
+
+    "cust_banners": {
+      "loading_banners": "Loading Latest Banners",
+      "create_first_banner": "Create your first Banner!",
+      "click_btn_to_create": "Click the button below to create your fist banner.",
+      "create_a_banner": "Create A Banner",
+      "edit": "Edit",
+      "duplicate": "Duplicate",
+      "delete": "Delete",
+
+      "id": "ID",
+      "name": "Name",
+      "sort_order": "Sort Order",
+      "image_url": "Image URL",
+      "link_url": "Link URL",
+
+      "background_color": "Background Color",
+      "bgc_format_valid_starts": "A valid hex code starts with a",
+      "bgc_format_followed_by": "and is followed by",
+      "bgc_format_or": "or",
+      "bgc_format_and": "and",
+      "bgc_format_letters": "letters",
+
+      "modified": "Modified",
+
+      "comfirm_delete": "Are you sure you wish to delete?",
+      "cannot_be_undone": "This action cannot be undon!",
+      "data_and_image_will_be_deleted": "Banner data and image will be deleted permanently.",
+
+      "new_banner": "New Homepage Banner"
+    }
+  }
+}

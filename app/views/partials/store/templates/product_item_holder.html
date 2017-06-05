@@ -1,0 +1,47 @@
+<div class="col-sm-3 p5 pb0">
+  <div class="panel panel-hover panel-default panel-product">
+    <div class="panel-image hide-panel-body">
+        <img
+        ng-click="::$state.go('root.product.slug', {'sku':product.sku, 'slug':product.slug})"
+        alt="{{product.images[0].alt}}" ng-src="{{::product.images[0].src}}"
+        class="img-responsive withripple center" />
+    </div>
+    <div class="panel-footer pt0 pb0 pr5 pl10 clearfix">
+      <div class="row">
+        <div class="col-xs-10">
+          <h4
+            ng-click="::$state.go('root.product.slug', {'sku':product.sku, 'slug':product.slug})"
+            class="product-name text-left extra-large text-primary bold text-lighter-2x overflow-ellipsis"
+            ng-bind-html="get_lang_attr(product, 'name')"></h4>
+        </div>
+        <div class="col-xs-2">
+          <div class="dropup">
+            <button class="btn btn-default pull-right text-primary p5 m0 dropdown-toggle" type="button" id="dropdownMenu-{{::product.id}}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="vertical-align:middle;">
+              <i class="material-icons material-icons-more_vert md-24 text-lighter-1x rotate-90"></i>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-right material-icons-pull-right" aria-labelledby="dropdownMenu-{{product.id}}">
+              <li>
+                <a ui-sref="root.product.slug(::{'sku':product.sku, 'slug':product.slug})">
+                   <span class="text-lighter-1x" ng-bind-html="get_lang_attr(product, 'name')"></span>
+                  <i class="material-icons material-icons-keyboard_arrow_right pull-right text-lighter-2x"></i>
+                </a>
+              </li>
+              <li>
+                <a ng-click="::add_to_cart(product)">
+                  <span class="text-lighter-1x">{{'general.add_to_cart' | translate}}</span>
+                  <i class="material-icons material-icons-add_shopping_cart pull-right text-lighter-2x"></i>
+                </a>
+              </li>
+              <li>
+                <a ui-sref="root.brand(::{brand_id: product.brand.id, brand_name: brand_meta(product.brand.id, 'name')})">
+                  <span class="text-lighter-1x">{{ 'general.brand' | translate }}: {{brand_meta(product.brand.id, 'name')}}</span>
+                  <i class="material-icons material-icons-keyboard_arrow_right pull-right text-lighter-2x"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

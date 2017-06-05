@@ -1,0 +1,35 @@
+
+<section>
+  <div class="clearfix dropshadow">
+    <uib-carousel active="active" interval="5000" no-wrap="false" template-url="views/partials/store/carousel.html">
+      <uib-slide class="uibslide" ng-repeat="slide in slides track by slide.id" index="slide.id" style="background:{{slide.background}};">
+        <img ng-src="{{slide.src}}" style="margin:auto;">
+      </uib-slide>
+    </uib-carousel>
+  </div>
+</section>
+
+<section ng-if="featured_products.length > 0" class="clearfix pb50">
+  <div class="container-fluid">
+    <h2 class="border-left-orange extra-large text-lighter-1x">{{'store.featured_products' | translate}}</h2>
+
+    <div class="hover">
+      <div ng-repeat="product in featured_products track by product.id" ng-include="'views/partials/store/templates/product_item_holder.html'"></div>
+    </div>
+  </div>
+</section>
+
+<section ng-if="products.length > 0" class="clearfix pb50">
+  <div class="container-fluid">
+
+    <h2 ng-if="!$store.marketer.user" class="border-left-orange extra-large text-lighter-1x mb20">{{'store.top_selling_products' | translate}}</h2>
+    <h2 ng-if="$store.marketer.user" class="border-left-orange extra-large text-lighter-1x mb20">
+      {{::$store.marketer.user.first_name}} {{::$store.marketer.user.last_name}}
+      {{'store.recommended_products' | translate }}
+    </h2>
+
+    <div infinite-scroll="load_more()" class="hover clearfix">
+      <div ng-repeat="product in products track by product.id" ng-include="'views/partials/store/templates/product_item_holder.html'"></div>
+    </div>
+  </div>
+</section>

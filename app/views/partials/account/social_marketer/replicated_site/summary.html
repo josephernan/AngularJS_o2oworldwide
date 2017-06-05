@@ -1,0 +1,20 @@
+<div class="panel-body bg-success dark dropshadow">
+  <div class="pt20">
+    <div class="row">
+      <div class="col-sm-3 col-xs-5 center">
+        <i class="material-icons material-icons-account_circle text-lighter-1x" style="font-size: 14em;"></i>
+      </div>
+    </div>
+    <h2 class="text-center extra-large text-white text-lighter-1x">
+      {{::$store.user.first_name}} {{::$store.user.last_name}} <small>{{::$store.user.username}}</small> <br>
+      <small class="text-smaller">
+        <span class="hidden-sm hidden-xs">http://</span>{{::$store.replicated_url()}}
+        <span class="pl5">
+          <a class="btn btn-fab btn-fab-mini btn-raised text-lighter-2x ml10" target="_blank" ng-href="http://{{::$store.replicated_url()}}">
+            <i class="material-icons mi md-24 material-icons-open_in_new text-lighter-1x"></i>
+          </a>
+        </span>
+      </small>
+    </h2>
+  </div>
+</div>

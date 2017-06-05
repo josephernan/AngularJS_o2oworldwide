@@ -1,0 +1,94 @@
+{
+  "signup": {
+    "success": "Success: Successfully Signed up!",
+    "error": "Error: There was an error submitting your information try again later.",
+    "brand_owner": {
+
+    },
+    "marketer": {
+      "h1": "Sign up below and become an O2O <strong class='text-orange'>Social Marketer</strong>!",
+      "list": {
+        "1": "Generate income by selling products you love",
+        "2": "Fast Commissions",
+        "3": "No Overhead",
+        "4": "Full Customer Management Platform",
+        "5": "100% Genuine Products"
+      },
+      "h2": "Social Marketers Start Here",
+      "h2_small": "or download",
+      "info": {
+        "legend_h3": {
+          "text": "Your Information",
+          "small": "We want to get to know you"
+        },
+        "is_business": {
+          "label": "Will you be selling on O2O as a business?",
+          "option-0": {
+            "text": "Yes",
+            "small": {
+              "text": "I will be selling as a ",
+              "strong": "Business"
+            }
+          },
+          "option-1": {
+            "text": "No",
+            "small": {
+              "text": "I will be selling ",
+              "strong": "Person to Person"
+            }
+          }
+        },
+        "help_notice": {
+          "strong1" : "Don't Worry!",
+          "text1" : "You only need to signup as one, either: A",
+          "strong2" : "Business",
+          "text2": "Account, or a",
+          "strong3": "Personal",
+          "text3": "Account."
+        },
+        "business": {
+          "legend_h3": "The Business Information",
+          "business_license_id_number": {
+            "label": "Business License Identification Number",
+            "placeholder": "Business License ID Number"
+          },
+          "business_contact": "Business Contact"
+        },
+        "personal": {
+          "legend_h3": "Your Information"
+        }
+      },
+      "account": {
+        "legend_h3": "Create An Account",
+        "email": {
+          "help": "This is the email address you will use to login"
+        },
+        "username": {
+          "help1": "This is the Social Marketer code that your customers will use to access your replicated website:",
+          "help2": "If found to be a duplicate, this username will be adjusted to be unique."
+        }
+      },
+      "optional": {
+        "legend_h3": "Optional Information",
+        "referral": {
+          "label": "Referral",
+          "placeholder" : "O2O Username/Code of referal",
+          "help": "If an O2O user refered you, you can put their Code in here (if it's not already) to give them extra credit."
+        }
+      }
+    },
+    "customer" : {
+      "customer_signup": "Customer Signup",
+      "h1" : "Create Account",
+      "sm_signup" : "Signup as a Social Marketer",
+      "username" : {
+        "help1": "In order to earn your O2O Points for a friend's purchase, have them enter this code during checkout:",
+        "help2": "If found to be a duplicate, this username will be adjusted to be unique."
+      }
+    },
+    "complete": {
+      "continue_shopping": "Continue Shopping",
+      "goto_backoffice": "Go to your Backoffice"
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "login": {
+    "NoAccount" : "没有账号?",
+    "WrongEmailOrPasswd" : "您输入的邮箱地址或密码有误，请重试.",
+    "UnableToConnectServer" : "暂时无法连接服务器，请稍后再试.",
+    "FailedToConnectServer": "连接服务器有误，请稍后再试.",
+    "LoggedIn" : "您已经登录.",
+    "LoggedIntoO2O" : "登录成功",
+    "ContinueShopping" : "继续购物"
+  }
+}

@@ -1,0 +1,55 @@
+<div class="pt20 pb20" ng-keydown="key_watch_login($event)">
+  <div class="col-md-6 col-xs-12 center">
+    <div class="panel">
+      <div class="panel-heading">
+        <h1 ng-if="!login.submit_success" class="mb20">
+          {{'general.o2o_hq' | translate }} | {{'general.login' | translate }}
+        </h1>
+      </div>
+      <div class="panel-body">
+        <form id="login_form" name="login_form" ng-submit="login.submit()">
+
+          <div ng-if="login.submit_error && !login.submit_success">
+            <div class="clearfix"></div>
+
+            <div class="alert alert-danger" role="alert">
+              {{'general.error' | translate }}: {{login.submit_error | translate}}
+            </div>
+          </div>
+
+          <div ng-if="!login.submit_success">
+            <div class="form-group label-floating is-empty" show-errors>
+              <label class="control-label" for="email">{{'general.form.email.label' | translate}}</label>
+              <input ng-model="login.form_data.username" required class="form-control" id="email" type="text" name="username">
+            </div>
+
+            <div class="form-group label-floating is-empty" show-errors>
+              <label class="control-label" for="password">{{'general.form.password.label' | translate}}</label>
+              <input ng-model="login.form_data.password" required class="form-control" id="password" type="password" name="password">
+            </div>
+
+            <button class="btn btn-primary btn-raised btn-block mb20" type="submit">
+              {{'general.login' | translate}}
+              <i class="fa fa-sign-in pl10"></i>
+            </button>
+
+            <div class="pt20">
+              <p class="text-right">
+                {{'login.NoAccount' | translate }}<br>
+                <a ui-sref="root.signup" class="btn btn-default btn-raised">
+                  {{'general.register' | translate}}
+                  <i class="fa fa-user-plus pl10"></i>
+                </a>
+              </p>
+            </div>
+
+            <div class="clearfix"></div>
+          </div>
+
+          <div class="clearfix"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="clearfix"></div>

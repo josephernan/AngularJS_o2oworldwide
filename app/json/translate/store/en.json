@@ -1,0 +1,9 @@
+{
+  "store": {
+    "h1": "O2O Worldwide Store",
+
+    "top_selling_products": "Top Selling Products",
+    "featured_products": "Featured Products",
+    "recommended_products" : "Recommended Products"
+  }
+}

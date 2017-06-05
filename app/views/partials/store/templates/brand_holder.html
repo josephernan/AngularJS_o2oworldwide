@@ -1,0 +1,15 @@
+<div ui-sref="root.brand(::{brand_id: brand.id, brand_name: brand_meta(brand.id, 'name')})" class="col-md-4 p5 pb0">
+  <div class="panel panel-default panel-hover">
+    <div class="panel-image hide-panel-body">
+      <img
+        ng-src="{{::$store.site_url(brand_meta(brand.id, 'logo'))}}"
+        alt="{{brand_meta(brand.id, 'name')}}"
+        class="img img-responsive p5">
+    </div>
+    <div class="panel-footer pt0 pb0 pr5 pl10 clearfix">
+      <h4 class="text-left extra-large text-primary bold text-lighter-2x">
+        {{brand_meta(brand.id, 'name')}}
+      </h4>
+    </div>
+  </div>
+</div>

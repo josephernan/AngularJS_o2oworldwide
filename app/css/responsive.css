@@ -1,0 +1,157 @@
+/***********************************************************/
+/********************** Large desktop **********************/
+/***********************************************************/
+
+@media (min-width: 1200px) {
+  .pull-right-lg {
+    float: right;
+  }
+  .pull-left-lg {
+    float: left;
+  }
+  .pb50-lg {
+    padding-bottom: 50px !important;
+  }
+}
+/***********************************************************/
+/******* Portrait tablet to landscape and desktop **********/
+/***********************************************************/
+
+@media (max-width: 979px) {
+  .text-left-md {
+    text-align: left;
+  }
+  .mt0-md {
+    margin-top: 0px !important;
+  }
+  .pt0-md {
+    padding-top: 0px !important;
+  }
+  .pt20-md {
+    padding-top: 20px !important;
+  }
+  .pb20-md {
+    padding-bottom: 20px !important;
+  }
+  .pb50-md {
+    padding-bottom: 50px !important;
+  }
+  .pl0-md {
+    padding-left: 0px !important;
+  }
+  .p20-md {
+    padding-left: 20px !important;
+  }
+  .carousel-caption {
+    top: 0%;
+  }
+  .sidemenu-holder .side-menu, .main-slider {
+    padding-top: 10px;
+  }
+  #your-account-dropdown {
+    padding-right: 0px;
+    margin-right: 0px;
+  }
+}
+@media (min-width: 979px) {
+  .sidemenu-holder .side-menu .head {
+    margin-top: -35px;
+  }
+}
+/***********************************************************/
+/************* Landscape phone to portrait tablet **********/
+/***********************************************************/
+
+@media (max-width: 767px) {
+  #top-header .top-navbar {
+    margin: 10px;
+    margin-left: 0px;
+    width: 97.5%;
+  }
+  .text-left-sm, .text-left-xs {
+    text-align: left;
+  }
+  .pt20-sm {
+    padding-top: 20px;
+  }
+  .mt0-sm {
+    margin-top: 0px !important;
+  }
+  .center-sm {
+    float: none;
+    clear: both;
+    display: table;
+    margin: 0px auto;
+  }
+  .text-center-sm {
+    text-align: center;
+  }
+  .mt-sm-10 {
+    margin-top: 10px;
+  }
+  .input-group .input-group-addon {
+    display: none;
+  }
+  .input-group {
+    width: 100%;
+  }
+  .dropdown-menu.full-width {
+    width: 100%;
+    margin: 0px;
+  }
+  .pb50-sm {
+    padding-bottom: 50px !important;
+  }
+  .table-responsive {
+    border: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .center-md {
+    float: none;
+    clear: both;
+    display: table;
+    margin: 0px auto;
+  }
+  .pull-right-md {
+    float: right;
+  }
+  .pull-left-md {
+    float: left;
+  }
+  label.control-label.text-larger {
+    margin-top: 10px;
+  }
+  .mb75-md {
+    margin-bottom: 75px;
+  }
+  #nav-site-links, #top-megamenu-nav {
+    overflow: hidden;
+    white-space: nowrap;
+
+    border-bottom: 1px solid #e7e7e7;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    background: #FF5722;
+    height: 35px;
+  }
+
+  #top-megamenu-nav .navbar-nav > li {
+    display: inline-block;
+    float: none !important;
+  }
+}
+@media (max-width: 992px) {
+  .btn-group.affix,
+  .btn-group-vertical.affix {
+    position: relative;
+  }
+}
+@media (max-width: 1199px) {
+  body {
+    padding-top: 50px;
+  }
+}
+/***********************************************************/
+/***************** Landscape phones and down ***************/
+/***********************************************************/

@@ -1,0 +1,26 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-12">
+      <h1
+      ng-class="{
+        'border-left-success' : !!$state.includes('root.account.replicated_site'),
+        'border-left-primary' : !!$state.includes('root.account') && !!!$state.includes('root.account.replicated_site')
+        }"
+        class="extra-large pl20 pr20 dark"
+        >
+        {{::$store.user.first_name}} {{::$store.user.last_name}}
+        <small>{{'top-nav.your-account-dropdown.account' | translate}}</small>
+      </h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-3">
+      <div ui-view="sidebar"></div>
+    </div>
+    <div class="col-md-9">
+      <div ui-view="content"></div>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+</div>

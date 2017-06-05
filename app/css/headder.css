@@ -1,0 +1,91 @@
+.nav-cart-cart.nav-cart-1 {
+  top: 1px;
+  left: 23px;
+  font-size: 17px;
+}
+
+.nav-cart-cart.nav-cart-10 {
+  top: 5px;
+  font-size: 15px;
+  left: 20px;
+}
+
+.nav-cart-cart.nav-cart-100 {
+  top: 8px;
+  font-size: 12px;
+  left: 18px;
+}
+
+
+.nav-cart-badge {
+  width: 24px;
+  height: 24px;
+  position: relative;
+  margin-right: 15px;
+}
+.badge-notify {
+  background: #ff5722;
+  position:absolute;
+  top: -10px;
+  right: -10px;
+}
+
+.nav-cart-badge.nav-cart-10 .badge-notify {
+  right: -1.6em;
+}
+
+.nav-cart-badge.nav-cart-100 .badge-notify {
+  right: -2em;
+}
+
+
+.nav-line-1 {
+  font-size: 12px;
+  line-height: 14px;
+  height: 14px;
+  font-weight: 400;
+  display: block;
+  margin-top: -5px;
+  padding-bottom: 28px;
+}
+
+.nav-line-2 {
+  font-size: 14px;
+  line-height: 15px;
+  font-weight: 700;
+  position: absolute;
+  bottom: 3px;
+}
+
+
+.navbar .navbar-nav > li > a {
+  padding-bottom: 16px;
+}
+
+.navbar a:hover,
+.navbar a:focus {
+  color: white;
+}
+
+.navbar .form-group i {
+  margin-bottom: -5px;
+}
+
+.navbar .input-group .input-group-btn {
+  padding: 0 6px;
+}
+
+@media (min-width: 1200px) {
+  .nav-line-1 {
+    padding-bottom: 34px;
+  }
+  .nav-line-2 {
+    bottom: 8px;
+  }
+}
+
+@media (min-width: 768px) {
+  .navbar .navbar-nav > li > a {
+      padding-bottom: 11px;
+  }
+}

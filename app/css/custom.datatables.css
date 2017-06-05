@@ -1,0 +1,103 @@
+.checkbox label, .radio label, label {
+  color: rgba(0,0,0,.47);
+}
+
+.dataTables_wrapper .dataTables_info,
+.dataTables_length {
+  margin-left: 0px;
+}
+
+.dataTables_wrapper .row {
+  margin: 0px auto;
+}
+
+.dataTables_wrapper .form-group.form-group-sm {
+  padding-bottom: 0px;
+  margin: 0px;
+}
+.dataTables_filter input[type=search] {
+  border: inherit;
+  margin-left: 10px;
+}
+.dataTables_length select.form-control {
+  margin: -10px 3px 0px 3px;
+}
+table.dataTable, table.dataTable.no-footer {
+  border: none;
+}
+table.table thead th[class^="sorting_"]:before,
+table.table thead th[class*="sorting_"]:before {
+  font: normal normal normal 14px/1 MaterialIcons;
+  font-size: 1.2em;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transform: translate(0, 0);
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'liga';
+  vertical-align: middle;
+  will-change: inherit;
+}
+table.table tbody td.sorting_1 {
+  color: rgba(0,0,0,.87);
+}
+table.table tbody td:not(.sorting_1) {
+  color: rgba(0,0,0,.60);
+}
+table.table thead .sorting_asc:before {
+  content:"\e5db"
+}
+
+table.table thead .sorting_desc:before {
+  content:"\e5d8"
+}
+th.sorting {
+  opacity: 0.70;
+}
+.dataTable > thead > tr > th,
+.dataTable > tbody > tr > th,
+.dataTable > tfoot > tr > th,
+.dataTable > thead > tr > td,
+.dataTable > tbody > tr > td,
+.dataTable > tfoot > tr > td {
+  padding: 13px 16px;
+  font-size: 0.9em;
+}
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > span:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:focus {
+  background-color: #3949ab;
+  border-color: #3949ab;
+}
+.pagination > li > a,
+.pagination > li > span {
+  color: #3949ab;
+}
+
+@media (max-width: 768px) {
+  .dataTable > thead > tr > th,
+  .dataTable > tbody > tr > th,
+  .dataTable > tfoot > tr > th,
+  .dataTable > thead > tr > td,
+  .dataTable > tbody > tr > td,
+  .dataTable > tfoot > tr > td {
+    padding: 13px 10px 13px 10px;
+  }
+  .dataTables_wrapper .row:first-child, .dataTables_wrapper .row:last-child > .col-xs-6:first-child {
+    display: none;
+  }
+  .dataTables_wrapper .row:last-child > .col-xs-6:last-child {
+    width: 100%;
+    padding: 0px;
+  }
+  div.dataTables_paginate {
+    float: none;
+    clear: both;
+    display: table;
+    margin: 0px auto;
+  }
+}

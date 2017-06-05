@@ -1,0 +1,29 @@
+@font-face {
+  font-family: 'Noto Sans';
+  src: url('../fonts/NotoSansCJKsc-Regular-3500.eot');
+  src: local('Noto Sans'),
+       local('NotoSans'),
+       url('../fonts/NotoSansCJKsc-Regular-3500.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/NotoSansCJKsc-Regular-3500.woff') format('woff'),
+       url('../fonts/NotoSansCJKsc-Regular-3500.ttf') format('truetype'),
+       url('../fonts/NotoSansCJKsc-Regular-3500.svg#noto_sans_regular') format('svg');
+}
+
+/*@font-face {
+  font-family: 'Noto Sans';
+  src: url('../fonts/NotoSansCJKsc-Thin-3500.eot');
+  src: url('../fonts/NotoSansCJKsc-Thin-3500.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/NotoSansCJKsc-Thin-3500.woff') format('woff'),
+       url('../fonts/NotoSansCJKsc-Thin-3500.ttf') format('truetype'),
+       url('../fonts/NotoSansCJKsc-Thin-3500.svg#noto_sans_Thin') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}*/
+
+body {
+  font-family: 'Noto Sans', arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: 'Noto Sans', arial, sans-serif !important;
+}

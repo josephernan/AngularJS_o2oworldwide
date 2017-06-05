@@ -1,0 +1,14 @@
+{
+  "commissions": "Commissions",
+  "table": {
+    "table": "Table",
+    "pct": "Percentage",
+    "total_price": "Total Price"
+  },
+  "calculator": {
+    "calculator": "Calculator",
+    "if_I_sell": "If I sell",
+    "then": "then I will earn",
+    "enter_help": "Enter a total sales volume to see what commission and percentage you would earn"
+  }
+}

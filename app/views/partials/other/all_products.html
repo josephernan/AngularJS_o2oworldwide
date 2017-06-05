@@ -1,0 +1,24 @@
+<div class="container pt50 pb50">
+  <legend><h1 class="extra-large center mb20">O2O HQ Products</h1></legend>
+
+  <div class="pt20">
+    <div ng-repeat="product in products" class="pb10 col-md-4">
+      <div class="col-sm-4" style="height: 5em">
+        <img ng-src="{{product.images[0].src}}" alt="" class="img-responsive pt5">
+      </div>
+      <div class="col-sm-6 p0" style="height: 5em">
+        <h5 class="pb20 mt0">
+          <strong ng-bind-html="product.name"></strong>
+          <br>
+          <small>
+            by <a ui-sref="root.brand({brand_id: product.brand.id, brand_name: brand_meta(product.brand.id, 'name')})">{{product.brand.name}}</a>
+          </small>
+        </h5>
+      </div>
+      <div class="col-sm-2"  style="height: 5em">
+        <span class="abs-top-right top5">{{get_price_str(product.price)}}</span>
+      </div>
+    </div>
+  </div>
+
+</div>

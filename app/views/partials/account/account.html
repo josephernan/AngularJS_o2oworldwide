@@ -1,0 +1,18 @@
+<div class="panel panel-default">
+  <div class="panel-body bg-primary dark dropshadow">
+    <div class="pt20">
+      <div class="row">
+        <div class="col-sm-3 col-xs-5 center">
+          <i class="material-icons material-icons-account_circle text-lighter-1x" style="font-size: 14em;"></i>
+        </div>
+      </div>
+      <h2 class="text-center extra-large text-white text-lighter-1x pb20">{{::$store.user.first_name}} {{::$store.user.last_name}} <small>{{::$store.user.username}}</small></h2>
+    </div>
+  </div>
+</div>
+
+<div id="my-commissions" ng-if="::$store.user.is_a('b2')" ng-include="'views/partials/account/social_marketer/index_commissions.html'"></div>
+
+<div id="customers-orders" ng-if="::$store.user.is_a('b2')" ng-include="'views/partials/account/social_marketer/customers_orders.html'"></div>
+
+<div id="my-orders" ng-include="'views/partials/account/my_orders.html'"></div>

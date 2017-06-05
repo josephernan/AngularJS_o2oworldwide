@@ -1,0 +1,77 @@
+<div class="modal-header">
+   <h3 ng-if="banner.name()" class="modal-title"> {{banner.name()}} <small>{{'account.cust_banners.' + action | translate | capitalize}}</small></h3>
+   <h3 ng-if="!banner.name()" class="modal-title"> {{'account.cust_banners.new_banner' | translate}} </h3>
+</div>
+<div class="modal-body">
+  <div ng-form="banner_form" class="form-horizontal">
+
+    <div class="form-group" show-errors>
+      <label for="" class="col-md-2 control-label">{{'account.cust_banners.name' | translate}}</label>
+      <div class="col-md-10">
+        <input ng-model="banner.data.key" type="text" class="form-control">
+      </div>
+    </div>
+
+    <div class="form-group" show-errors>
+      <label for="" class="col-md-2 control-label">{{'account.cust_banners.sort_order' | translate}}</label>
+      <div class="col-md-10">
+        <input ng-model="banner.data.value1" type="number" class="form-control">
+      </div>
+    </div>
+
+    <div class="form-group" show-errors>
+      <label for="" class="col-md-2 control-label">{{'account.cust_banners.link_url' | translate}}</label>
+      <div class="col-md-10">
+        <input ng-model="banner.data.value2" type="text" class="form-control">
+      </div>
+    </div>
+
+    <div class="form-group" show-errors>
+      <label for="" class="col-md-2 control-label">{{'account.cust_banners.image_url' | translate}}</label>
+      <div class="col-md-10">
+        <input ng-model="banner.data.value" type="text" class="form-control">
+      </div>
+    </div>
+
+
+    <div class="col-lg-12 border-gray-top border-gray-bottom" style="background-color:{{banner.background_color()}};min-height:50px;">
+      <img ng-src="{{banner.src()}}" alt="" class="img img-responsive col-xs-8 center"/>
+    </div>
+
+    <div class="form-group clearfix mb20" show-errors>
+      <label for="" class="col-md-2 control-label">
+        {{'account.cust_banners.background_color' | translate}}
+      </label>
+      <div class="col-md-10">
+        <input
+          name="background_color"
+          ng-model="banner.data.value3"
+          type="text"
+          class="form-control"
+          ng-pattern="'^#(?:[0-9a-fA-F]{3}){1,2}$'"
+          required="required"
+          placeholder="#212121"/>
+
+        <span class="help-block show">
+          {{'account.cust_banners.bgc_format_valid_starts' | translate}}
+          <code>#</code> {{'account.cust_banners.bgc_format_followed_by' | translate}}
+          <code>3 {{'account.cust_banners.bgc_format_or' | translate}} 6</code>
+          {{'account.cust_banners.bgc_format_letters' | translate}}
+          <code>A–F</code>
+          {{'account.cust_banners.bgc_format_and' | translate}}
+          <code>0–9</code>
+          &nbsp;
+          <strong class="text-primary">#3949ab</strong>,
+          <strong class="text-orange">#ff5722</strong>,
+          <strong class="text-info">#039be5</strong>,
+          <strong class="text-warning">#ffa000</strong>,
+          <strong class="text-success">#43a047</strong>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal-footer">
+   <button class="btn btn-warning" type="button" ng-click="cancel()">{{'general.cancel' | translate}}</button>
+   <button class="btn btn-primary" type="button" ng-click="ok()">{{'general.save' | translate}}</button>
+</div>

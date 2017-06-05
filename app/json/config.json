@@ -1,0 +1,106 @@
+{
+  "$scope": {
+    "footer": {
+      "social": {
+        "img_base": "assets/images/footer/",
+        "networks": [
+          {
+            "alt": "twitter",
+            "img": "twitter.png",
+            "url": "https://www.facebook.com/modernizedmedia/"
+          },
+          {
+            "alt": "facebook",
+            "img": "facebook.png",
+            "url": "https://www.facebook.com/modernizedmedia/"
+          },
+          {
+            "alt": "rss",
+            "img": "rss.png",
+            "url": "https://www.facebook.com/modernizedmedia/"
+          }
+        ]
+      },
+      "links": [
+        {
+          "title": "Company",
+          "links": [
+            {
+              "text": "Home",
+              "url": "/home"
+              },
+            {
+              "text": "About us",
+              "url": "/about-us"
+              },
+            {
+              "text": "Join Now",
+              "url": "/join-now"
+              },
+            {
+              "text": "Products",
+              "url": "/products"
+              },
+            {
+              "text": "Contact",
+              "url": "/contact-us"
+              }
+            ]
+          },
+        {
+          "title": "Associates",
+          "links": [
+            {
+              "text": "Join Now",
+              "url": "/join-now"
+              },
+            {
+              "text": "Login",
+              "url": "/login"
+              },
+            {
+              "text": "Customer Support",
+              "url": "/support"
+              },
+            {
+              "text": "Request Brands",
+              "url": "/request-brands"
+              },
+            {
+              "text": "Terms & Conditions",
+              "url": "/terms-and-conditions"
+              }
+            ]
+          }
+        ]
+    },
+    "header": {
+      "top_nav_items": [
+        {
+          "text": "Home",
+          "url": "/home"
+        },
+        {
+          "text": "About O2O",
+          "url": "/home"
+        },
+        {
+          "text": "Brand Owners",
+          "url": "/home"
+        },
+        {
+          "text": "Associates",
+          "url": "/home"
+        },
+        {
+          "text": "Products",
+          "url": "/home"
+        },
+        {
+          "text": "Contact",
+          "url": "/contact-us"
+        }
+      ]
+    }
+  }
+}

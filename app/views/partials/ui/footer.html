@@ -1,0 +1,49 @@
+<div>
+  <div class="pt5 orange-bg"></div>
+  <div class="row pb50 dark-gray-bg">
+    <div class="container">
+      <img src="assets/images/footer/logo-footer.png" alt="O2O Worldwide Logo" class="col-md-2 pl0 pt50 img img-responsive hidden-xs hidden-sm">
+
+      <!-- <div class="col-sm-6 col-md-4 pl0-md visible-md visible-lg">
+        <div data-ng-repeat="link_set in footer.links" class="col-sm-6 pt20">
+          <h4 class="text-uppercase pb5">{{link_set.title | translate}}</h4>
+          <ul>
+            <li data-ng-repeat="link in link_set.links">
+              <a class="text-lighter" data-ui-sref="{{link.sref}}">{{link.text | translate}}</a>
+            </li>
+          </ul>
+        </div>
+      </div> -->
+
+      <img class="col-sm-4 col-md-2 img img-responsive pt20-md center-sm pt20" src="{{$store.qr_code_url()}}" alt="">
+
+      <div class="col-md-4 pt20 pull-right-md hidden-xs">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="col-xs-2 social-img-container" ng-repeat="network in networks = (($store.marketer.user) ? $store.marketer.social_networks : footer.social_networks)" class="col-xs-1">
+              <a ng-href="{{(network.value !== '') ? network.value : network.url}}" class="text-center">
+                <i
+                  ng-if="network.fa !== undefined"
+                  class="fa fa-2x {{network.fa}}"></i>
+
+                <img
+                  ng-if="network.img !== undefined"
+                  class="img-responsive hover-light "
+                  ng-src="{{network.img}}"
+                  alt="{{network.alt}}"
+                  style="max-height: 26px; max-width: 26px;">
+              </a>
+              <div ng-if="($index % (networks.length*.5).toFixed(0)) == 0"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-lighter-2x" style="position: absolute;right: 25px;bottom: 5px;">
+        <p>
+          © {{'general.o2o_hq' | translate}} {{footer.year}} {{'footer.rights' | translate}} <span class="text-lighter-3x">{{'footer.icp' | translate}}</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

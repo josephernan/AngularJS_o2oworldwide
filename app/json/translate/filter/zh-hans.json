@@ -1,0 +1,27 @@
+{
+  "filter": {
+    "search": {
+      "show_results": "显示结果",
+      "all_brands": "所有品牌",
+      "no_products_or_brands_found": "没有个相关商品或个相关品牌",
+      "found" : "搜到",
+      "matching_products": "个相关商品.",
+      "matching_brands": "个相关品牌.",
+
+      "search_result_for": "搜索结果",
+      "search_products_and_brands_below": "搜索下列商品或品牌",
+
+      "sort_options": {
+        "sort_by": "分类方式",
+        "price": "价钱",
+        "name": "名称从",
+
+        "relevance": "关联性",
+        "a-z": "A到Z排列",
+        "z-a": "Z到A排列",
+        "low-high": "从低到高",
+        "high-low": "从高到低"
+      }
+    }
+  }
+}

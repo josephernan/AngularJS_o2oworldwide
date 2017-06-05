@@ -1,0 +1,154 @@
+<div class="rma rma-index container-fluid pb20">
+  <div ng-if="rma.order() && rma.order().products">
+    <div class="row">
+      <div class="col-lg-12">
+        <h1 class="border-left-orange extra-large text-lighter-1x mb20">
+          {{ 'rma.info.review_rma' | translate }}
+          <small class="hidden-sm hidden-xs">{{::rma.order().invoice_no}}</small>
+          <small>
+            <a ng-if="::!!$store.user" target="_blank" class="btn btn-orange btn-sm btn-raised" ui-sref="root.account.order({order_id: order_id})">{{ 'rma.invoice_no' | translate }}: {{::rma.order().invoice_no}} <i class="material-icons material-icons-open_in_new"></i></a>
+            <a ng-if="::!!!$store.user" target="_blank" class="btn btn-orange btn-sm btn-raised" ui-sref="root.checkout.complete({order_id: order_id})">{{ 'rma.invoice_no' | translate }}: {{::rma.order().id}} <i class="material-icons material-icons-open_in_new"></i></a>
+          </small>
+        </h1>
+      </div>
+    </div>
+
+    <div class="row">
+      <div ng-repeat="item in rma.order().products"  ng-class="(_.size(rma.order().products) > 1) ? 'col-md-6' : 'col-lg-12'">
+        <div class="panel">
+          <div class="panel-heading clearfix">
+            <h3 class="mt5 display-inline">
+              {{get_lang_attr(item.product, 'name')}}
+            </h3>
+          </div>
+          <div class="panel-body">
+            <img ng-src="{{::item.product.images[0].src}}" ng-alt="{{::item.product.images[0].alt}}" class="img-responsive pr0 pl0" ng-class="(_.size(rma.order().products) > 1) ? 'center' : ''">
+          </div>
+          <div class="panel-body table-responsive">
+            <table class="table table-fixed">
+              <tbody>
+                <tr>
+                  <td width="35%" class="no-border-top"><strong>SKU</strong></td>
+                  <td class="no-border-top">{{item.product.sku}}</td>
+                </tr>
+                <tr>
+                  <td width="35%"><strong>{{'rma.index.quantity_to_return' | translate}}</strong></td>
+                  <td>{{::rma.data.items[item.product.id].quantity}}</td>
+                </tr>
+                <tr>
+                  <td width="35%"><strong>{{'rma.index.why_are_you_returning' | translate}}</strong></td>
+                  <td>
+                    <p>{{'rma.reasons.' + rma.data.items[item.product.id].reason | translate}}</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="35%"><strong>{{'rma.index.comments' | translate}}</strong></td>
+                  <td>
+                    <p>{{rma.data.items[item.product.id].comments}}</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-12">
+        <div class="panel">
+          <div class="panel-heading">
+            <h3 class="mt5">{{'rma.info.general_comment' | translate}} <small>({{'general.not_required' | translate}})</small></h3>
+          </div>
+          <div class="panel-body withripple">
+            <div class="form-group mt0">
+              <textarea
+                ng-model="rma.data.general_comment"
+                class="form-control"
+                id="rma_item__{{::item.product.id}}[comments]"
+                name="rma_item__{{::item.product.id}}[comments]"
+                rows="5"
+                ng-required="rma.data.items[item.product.id].returning"
+                placeholder="{{'rma.info.general_comment_placeholder' | translate}} ..."
+                  >
+                </textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row p0">
+      <div class="col-lg-12">
+        <div ng-show="info_step === 0" class="btn-group pull-right">
+          <a ui-sref="root.rma({order_id: order_id})" class="btn btn-white btn-raised">
+            <i class="material-icons material-icons-arrow_back pr5"></i>
+            {{'rma.info.fix_something' | translate}}
+          </a>
+
+          <a class="btn btn-orange btn-raised" ng-click="info_step = 1">
+            <i class="material-icons material-icons-playlist_add_check pr5"></i>
+            {{'rma.info.looks_good' | translate}}
+          </a>
+        </div>
+
+        <div ng-show="info_step >= 1">
+          <div class="col-md-6 p0 pull-right">
+
+            <div class="row">
+              <div class="col-lg-12 pb10">
+                <div class="checkbox clearfix">
+                  <label>
+                    <input
+                      ng-model="truthy"
+                      name="truthy"
+                      type="checkbox"
+                      ng-change="info_step = (!!truthy) ? 2 : 1"
+                      required>
+                    <span class="pl10">
+                      {{'rma.info.truthy_notice' | translate}}
+                    </span>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div ng-if="show_info_submit_error" class="row">
+              <div class="col-lg-12 pb10">
+                <div ng-if="show_info_submit_error && !truthy" class="alert alert-danger dropshadow">
+                  {{'rma.info.truthy_required' | translate}}
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-lg-12 pb20">
+                <div class="btn-group pull-right">
+                  <a ui-sref="root.rma({order_id: order_id})" class="btn btn-white btn-raised">
+                    <i class="fa fa-chevron-circle-left pl10"></i>
+                    {{'rma.info.fix_something' | translate}}
+                  </a>
+
+                  <a
+                    ng-click="info_submit(info_step)"
+                    ng-disabled="info_step == 1"
+                    class="btn btn-orange btn-raised pull-right">
+                    {{'rma.info.submit_rma' | translate}}
+                    <i class="fa fa-chevron-circle-right pl10"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div ng-if="!rma.order()" class="clearfix pt50">
+    <div class="jumbotron col-md-8 center">
+      <h2 class="extra-large text-lighter-1x">Verifying Information ... </h2>
+      <div class="center col-xs-2 pt50 pb50"><spinner></spinner></div>
+    </div>
+  </div>
+</div>

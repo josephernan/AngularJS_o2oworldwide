@@ -1,0 +1,56 @@
+<div class="table-responsive col-lg-12 p0" ng-show="ngCart.getTotalItems() > 0">
+    <table class="table table-striped ngCart cart mb0 border-none-children">
+        <thead class="text-lighter-1x">
+          <tr>
+              <th></th>
+              <th>{{'checkout.product_name' | translate}}</th>
+              <th>{{'checkout.quantity' | translate}}</th>
+              <th>{{'checkout.amount' | translate}}</th>
+              <th>{{'checkout.total' | translate}}</th>
+          </tr>
+        </thead>
+        <tbody class="text-lighter-1x">
+          <tr ng-repeat="item in ngCart.getCart().items track by $index" class="text-lighter-1x">
+              <td><span ng-click="ngCart.removeItemBySku(item.getSku())" class="glyphicon glyphicon-remove"></span></td>
+
+              <td><a ui-sref="root.product({'sku':item.getSku()})">{{ item.getName() }}</a></td>
+              <td><span class="glyphicon glyphicon-minus" ng-class="{'disabled':item.getQuantity()==1}"
+                        ng-click="item.setQuantity(-1, true)"></span>&nbsp;&nbsp;
+                  {{ item.getQuantity() | number }}&nbsp;&nbsp;
+                  <span class="glyphicon glyphicon-plus" ng-click="item.setQuantity(1, true)"></span></td>
+              <td>{{ item.getPrice() | price:this}}</td>
+              <td>{{ item.getTotal() | price:this }}</td>
+          </tr>
+        </tbody>
+        <tfoot class="text-lighter-1x">
+          <tr class="subtotal" ng-show="ngCart.getSubTotal()">
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>{{'checkout.subtotal' | translate}}:</td>
+              <td>{{ ngCart.getSubTotal() | price:this }}</td>
+          </tr>
+          <tr class="tax" ng-show="ngCart.getTax()">
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>{{'checkout.tax' | translate}} ({{ ngCart.getTaxRate() }}%):</td>
+              <td>{{ ngCart.getTax() | price:this }}</td>
+          </tr>
+          <tr class="shipping" ng-show="ngCart.getShipping()">
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>{{'checkout.shipping' | translate}}:</td>
+              <td>{{ ngCart.getShipping() | price:this }}</td>
+          </tr>
+          <tr class="total">
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>{{'checkout.total' | translate}}:</td>
+              <td>{{ ngCart.totalCost() | price:this }}</td>
+          </tr>
+        </tfoot>
+    </table>
+</div>

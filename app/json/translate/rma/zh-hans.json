@@ -1,0 +1,90 @@
+{
+  "rma": {
+
+    "invoice_no" : "发票号",
+
+    "remove_product_from_return": "商品从退货单移出",
+    "order_status_ineligible": "您选择的订单已不具退货条件",
+
+    "successfully_submitted": "退货请求成功提交",
+    "existing_rma_found": "发现同一订单退货请求",
+    "successfully_deleted": "成功删除退货",
+    "successfully_created": "成功建立退货请求",
+
+    "errors": {
+      "no_rma_found_for_id": "未发现该注册号码有退货请求",
+      "no_rma_items_selected": "未选择退货商品",
+      "submit_general": "您的退货请求出错",
+      "could_not_find_existing": "未发现本订单提交的退货请求"
+    },
+
+    "index": {
+      "choose_items_to_return": "挑选退货商品",
+      "ordered_on": "订单日期",
+      "sold_by": "品牌商",
+      "shipped_on": "发货日期",
+      "delivered_on": "交货日期",
+      "max_quantity_to_return": "总共几件退货",
+      "why_are_you_returning": "退货理由",
+
+      "note": "备注",
+      "note_text": "We aren't able to offer policy exceptions in response to comments. Do not include personal information as these comments may be shared with external service providers to identify product defects.",
+
+      "quantity_to_return": "退货件数",
+
+      "comments": "情况说明",
+      "comments_placeholder": "（必须填）请告知您退还这个商品的理由。",
+
+      "errors": {
+        "comments_required": "情况说明栏不能空白",
+        "no_returning_items": "请在商品名称左边勾选您要退货的商品。"
+      }
+    },
+
+    "info": {
+      "looks_good": "一切正常",
+      "fix_something": "纠正一个错误",
+      "review_rma": "检查退货请求书",
+      "truthy_notice": "我确认我对上述信息真实、准确、完整。我知道这些信息将被用来决定我提交本订单中的商品是否符合退货条件。",
+      "truthy_required": "您必须在确认上述信息后提交退货请求",
+      "submit_rma": "提交退货请求",
+
+      "general_comment": "您的意见",
+      "general_comment_placeholder": "请告知您对订单和退货商品的说明和意见"
+    },
+
+    "status": {
+      "title": "查看退货",
+
+      "rma_info": "退货信息",
+
+      "rma_id": "退货单号码",
+      "sku": "商品代码",
+      "order_id": "订单号码",
+      "status": "现状",
+      "active": "进行中",
+      "true": "积极回报",
+      "false": "返回不活跃",
+      "created_on": "退货单日期"
+    },
+
+    "reasons": {
+      "null": "",
+      "default": "请勾选退货理由n",
+      "bought_by_mistake": "买错啦",
+      "better_price_available": "发现更低价格",
+      "product_damaged_shipping_box_ok": "外包装良好但商品破损",
+      "item_arrived_too_late": "商品到达逾期",
+      "missing_parts_or_accessories": "商品缺件（附件或配件）",
+      "product_and_box_damaged": "产品和外包装破损",
+      "wrong_item": "商品发错啦",
+      "item_defective_or_doesnt_work": "商品不干活儿",
+      "recived_extra_item_didnt_purchase": "收到未购买的额外的商品（不需退款）",
+      "no_longer_needed": "不需要了",
+      "didnt_approve_purchase": "未授权购买",
+      "inaccurate_sm_description": "导购产品说明不正确",
+      "inaccurate_website_description": "网站产品说明不正确",
+      "other": "其它"
+    }
+  }
+}

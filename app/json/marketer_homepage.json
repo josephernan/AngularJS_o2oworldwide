@@ -1,0 +1,19 @@
+{
+  "marketer": {
+    "id": "18",
+    "name": "Jonathan Thompson",
+    "first_name": "Jonathan",
+    "last_name": "Thompson",
+    "email": "GreenMan@yoursite.com",
+    "phone": "8016878317",
+    "social": {
+      "facebook": "https://www.facebook.com/modernizedmedia",
+      "twitter": "https://www.linkedin.com/company/modernized-media",
+      "linkedin": "https://www.linkedin.com/company/modernized-media"
+    },
+    "profile": "http://backoffice.phoenix.o2oworldwide.com/files/thumb/4/200/200"
+  },
+  "home": {
+    "about": "Hey this is the Green Man group! We rock and you should totaly <b>buy</b> from us!"
+  }
+}

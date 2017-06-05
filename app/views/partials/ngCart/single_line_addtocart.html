@@ -1,0 +1,10 @@
+<div ng-form class="display-inline">
+  <span class="display-inline" translate="general.quantity"></span>
+  <input name="item_quantity" type="number" ng-model="q" class="item_quantity">
+
+  <div class="display-inline">
+    <a ng-disabled="!data.qty_available" class="btn btn-orange" ng-click="ngCart.addItem(q, data)"><i class="fa fa-cart-plus"></i> &nbsp; {{ (inCart()) ? 'general.update_cart' : 'general.add_to_cart' | translate }}</a>
+  </div>
+  <a ng-show="inCart()" ng-click="ngCart.removeItemBySku(data.sku)" class="text-small pt5 center clearfix"><i class="fa fa-close"></i> {{'general.remove_from_cart' | translate}}</a>
+
+</div>

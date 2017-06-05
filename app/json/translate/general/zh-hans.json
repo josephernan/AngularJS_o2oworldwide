@@ -1,0 +1,206 @@
+{
+  "general": {
+    "o2o_hq": "环球商网",
+    "social_marketer": "导购员",
+    "b2": "导购员",
+    "brand": "品牌",
+    "brand_owner": "品牌商",
+    "b1": "品牌商",
+    "ok": "行了",
+    "save": "保存",
+    "cancel": "取消",
+    "by": "由",
+    "close": "关",
+    "signup": "加盟",
+    "register": "一般注册",
+    "help": "帮助",
+    "signin": "登录",
+    "login": "登录",
+    "logout": "登出",
+    "search": "搜索",
+    "product": "产品",
+    "products": "制品",
+    "product_search": "产品搜索 ...",
+    "created": "创建",
+    "modified": "改性",
+    "submit": "提交",
+    "checkout": "查看",
+    "continue": "下一步",
+    "cart": "购物车",
+    "add_to_cart": "添加到购物车",
+    "update_cart": "刷新购物车",
+    "remove_from_cart": "从购物车中删除",
+    "quantity": "数量:",
+    "categories": "商品分类",
+    "required": "必须填",
+    "not_required": "自选",
+    "error": "出错",
+    "success": "成功",
+    "form": {
+      "error": {
+        "general": "请修正以上错误。",
+        "required": "请提供以上所需资料。"
+      },
+      "company_name": {
+        "label": "公司名称",
+        "placeholder": "公司名称"
+      },
+      "name": {
+        "label": "姓名",
+        "placeholder": "姓名",
+        "error_required": "姓名必须填。"
+      },
+      "fname": {
+        "label": "名字",
+        "placeholder": "名字",
+        "error_required": "名字必须填."
+      },
+      "lname": {
+        "label": "姓",
+        "placeholder": "姓",
+        "error_required": "姓氏必须填。"
+      },
+      "phone": {
+        "label": "电话号码",
+        "placeholder": "电话号码",
+        "error_required": "电话号码必须填。",
+        "error_tel": "请输入一个有效的电话号码。"
+      },
+      "email": {
+        "label": "电子邮箱",
+        "placeholder": "电子邮箱",
+        "error_required": "电子邮箱必须填。",
+        "error_email": "请输入有效的电子邮箱。"
+      },
+      "username": {
+        "label": "用户名",
+        "placeholder": "用户名",
+        "error_required": "用户名必须填。"
+      },
+      "password": {
+        "label": "密码",
+        "placeholder": "设置密码",
+        "error_required": "密码必须填"
+      },
+      "password_confirm": {
+        "label": "确认密码",
+        "placeholder": "确认密码",
+        "error_required": "确认密码必须填。"
+      },
+
+      "address1": {
+        "label": "街道地址",
+        "placeholder": "街道地址"
+      },
+      "address2": {
+        "label": "街道地址",
+        "placeholder": ""
+      },
+      "city": {
+        "label": "市/县",
+        "placeholder": "市/县"
+      },
+      "state": {
+        "label": "省/直辖市/自治区"
+      },
+      "country": {
+        "label": "国家",
+        "placeholder": "国家"
+      },
+      "postal_code": {
+        "label": "邮政编码",
+        "placeholder": "邮政编码",
+        "error_required": "邮政编码必须填。"
+      },
+
+      "seccond_id_number": {
+        "label": "二代身份证号码",
+        "placeholder": "二代身份证号码",
+        "error_required": "请填入二代身份证号码。"
+      },
+
+      "toc_agreement": {
+        "label": "我同意环球商网的",
+        "link": "条款和条件",
+        "error_required": "请接受条款和条件。"
+      },
+      "cta1": "继续",
+      "cta2": "提交",
+      "general_error": "请修正上面的错误",
+      "privacy": {
+        "pre": "Your",
+        "link_text": "Privacy",
+        "post": "is Protected"
+      }
+    },
+
+    "errors": {
+      "login_required": "You must be logged in to access this resource."
+    }
+  },
+  "top-nav": {
+    "toggle-nav": "切换导航",
+    "language": {
+      "language-selector-label": "语言：英语",
+      "en": "英语 (English)",
+      "zh-hans": "简体中文"
+    },
+    "sell-link": "【品牌商入驻环球商网",
+    "your-account-dropdown": {
+      "line-1": "您好，请登录",
+      "line-1-logged-in": "您好，",
+      "line-2": "您的账户",
+      "account": "您的账户",
+      "new-on-o2o": "第一次来环球商网？",
+      "start-here": "从这里开始",
+      "marketer": "您的导购员",
+      "backoffice": "您的后台办公室",
+      "dashboard": "您的管理面板",
+      "customers_orders": "客户订单",
+      "orders": "您的订单",
+      "business_center": "您的经营管理中心",
+      "qr_code": "我的二维码",
+      "qr_code-share": "二维码分享我的网址",
+      "qr_code-site": "我的网站网地址",
+      "messages": "您的留言",
+      "logout": "不是{{name}}请退出"
+    }
+  },
+  "footer": {
+    "signup": {
+      "h3": "最新消息",
+      "p": "新产品信息",
+      "email-placeholder": "邮箱地址",
+      "error_email": "请提供一个有效的电子邮件地址",
+      "error_required": "请提供一个电子邮件地址",
+      "submit_success": "成功加入环球商网通讯录。 谢谢。"
+    },
+    "links": {
+      "1": {
+        "title": "公司",
+        "home": "主页",
+        "about": "关于我们",
+        "join": "立即入驻",
+        "products": "产品",
+        "contact": "联系我们"
+      },
+      "2": {
+        "title": "导购员",
+        "join": "立即加盟",
+        "login": "登录",
+        "support": "客服",
+        "request_brands": "品牌请求",
+        "toc": "条件和规定"
+      }
+    },
+    "rights": "版权所有",
+    "icp" : "闽ICP备15016859号"
+  },
+  "test": "testing, check 1,2,3",
+  "notify" : {
+    "success" : {
+      "login_fetched" : "成功登录{{name}}。",
+      "logged_out" : "成功退出。"
+    }
+  }
+}

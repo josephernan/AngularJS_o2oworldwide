@@ -1,0 +1,51 @@
+{
+  "name": "o2o_store",
+  "version": "0.0.2",
+  "dependencies": {
+    "angular": "^1.5.0",
+    "angular-resource": "*",
+    "angular-cookies": "*",
+    "angular-sanitize": "*",
+    "angular-route": "*",
+    "angular-animate": "*",
+    "jquery": "*",
+    "moment": "*",
+    "bootstrap": "*",
+    "angular-ui-router": "*",
+    "angular-ui-router.stateHelper": "*",
+    "angular-translate": "*",
+    "angular-translate-loader-partial": "*",
+    "angular-translate-storage-local": "*",
+    "angular-translate-handler-log": "*",
+    "angular-loading-bar": "*",
+    "angular-moment": "*",
+    "angular-shims-placeholder": "*",
+    "angular-bootstrap-show-errors": "*",
+    "angular-ui-utils": "*",
+    "angular-bootstrap": "^1.2.0",
+    "components-font-awesome": "*",
+    "angular-utils-ui-breadcrumbs": "*",
+    "angular-local-storage": "*",
+    "ngcart": "*",
+    "oclazyload": "*",
+    "angular-pnotify": "*",
+    "angular-datatables": "*",
+    "bootstrap-material-design": "https://github.com/wallter/bootstrap-material-design.git",
+    "material-design-icons": "https://github.com/google/material-design-icons.git",
+    "nouislider": "^8.3.0",
+    "snackbarjs": "https://github.com/FezVrasta/snackbarjs.git",
+    "arrive": "^2.3.0",
+    "lodash": "^4.6.1",
+    "ngInfiniteScroll": "^1.2.2",
+    "angular-translate-interpolation-messageformat": "^2.11.0",
+    "angular-retina": "https://github.com/wallter/angular-retina.git"
+  },
+  "devDependencies": {
+    "cordova-promise-fs": "~1.0.1",
+    "bluebird": "~3.3.1"
+  },
+  "private": true,
+  "resolutions": {
+    "angular": "1.5.0"
+  }
+}

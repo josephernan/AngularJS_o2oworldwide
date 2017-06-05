@@ -1,0 +1,21 @@
+{
+  "product": {
+    "sold_by": "销售",
+    "and": "和",
+    "price": "价格",
+    "share": "共享",
+    "fulfilled_by_o2o": "您的订单由环球商网经办、履行",
+    "stock": {
+      "in_stock": "现货。",
+      "only": "尚有{{quantity}}存货。"
+    },
+    "product_details": "产品详情",
+    "details": {
+      "shipping": {
+        "title": "快递",
+        "text": "您的订单由环球商网合作快递公司配送。"
+      }
+    },
+    "product_description": "产品描述"
+  }
+}

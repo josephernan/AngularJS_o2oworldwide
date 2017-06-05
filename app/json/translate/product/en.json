@@ -1,0 +1,21 @@
+{
+  "product": {
+    "sold_by": "Sold By",
+    "and": "and",
+    "price": "Price",
+    "share": "Share",
+    "fulfilled_by_o2o": "Fulfilled by O2O HQ",
+    "stock": {
+      "in_stock": "In stock.",
+      "only": "Only {{quantity}} left in stock."
+    },
+    "product_details": "Product Details",
+    "details": {
+      "shipping": {
+        "title": "Shipping",
+        "text": "This item is shipped by O2O Worldwide's shipping network."
+      }
+    },
+    "product_description": "Product Description"
+  }
+}

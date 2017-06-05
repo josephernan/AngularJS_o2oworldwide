@@ -1,0 +1,19 @@
+<div ng-form class="display-inline">
+  <div class="" ng-class="{'hidden': !inCart()}">
+    <div class="center">
+      <span translate="general.quantity"></span> &nbsp;
+      <input name="item_quantity" type="number" ng-model="q" class="item_quantity">
+    </div>
+  </div>
+
+  <div class="">
+    <a ng-disabled="!data.quantity" class="btn btn-orange btn-raised" ng-click="add_to_cart_clicked(q, data)">
+      <span class="text-lighter-1x">{{ (inCart()) ? 'general.update_cart' : 'general.add_to_cart' | translate }}</span>
+      <i class="material-icons material-icons-add_shopping_cart pl5 mt-3 text-lighter-2x"></i>
+    </a>
+  </div>
+  <a ng-show="inCart()" ng-click="ngCart.removeItemBySku(data.sku)" class="text-small pt5 center clearfix" style="margin-top: -10px;">
+    <i class="material-icons material-icons-close text-lighter-2x pr5"></i>
+    <span text-lighter-1x>{{'general.remove_from_cart' | translate}}</span>
+  </a>
+</div>

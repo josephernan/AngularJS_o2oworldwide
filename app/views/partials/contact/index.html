@@ -1,0 +1,81 @@
+<div class="container-fluid pt20">
+
+  <div class="row">
+    <div class="togglebutton pb20">
+      <label class="center">
+        <span class="pr10 text-orange normal">{{'top-nav.language.zh-hans' | translate}}</span>
+        <input type="checkbox" checked="" ng-model="is_en">
+        <span class="pl10 text-primary normal">{{'top-nav.language.en' | translate}}</span>
+      </label>
+    </div>
+  </div>
+
+
+
+  <div class="row">
+    <div class="col-sm-8 center">
+      <img ng-src="{{card_src()}}" alt="" class="img img-responsive dropshadow2x" ng-click="is_en = !is_en">
+    </div>
+  </div>
+
+</div>
+
+<div class="container pb50 pt20">
+
+  <div class="row pt20">
+    <div class="panel panel-primary text-white center">
+
+      <div class="panel-heading pl20" style="border-bottom-color: rgba(255, 255, 255, 0.2);">
+        <p class="text-3x mb0">{{'contact.info.' + name + '.name' | translate}}</p>
+        <p class="lead text-lighter-2x m0">{{'contact.info.' + name + '.title' | translate}}</p>
+      </div>
+
+      <div class="panel-body list-group bg-primary">
+
+        <div class="list-group-item" style="padding: 0px;">
+          <div class="row-action-primary no-bg">
+            <i class="material-icons no-bg text-lighter-2x" style="font-size: 36px;">perm_phone_msg</i>
+          </div>
+          <div class="row-content">
+            <h4 class="list-group-item-heading" style="color: rgba(255, 255, 255, 0.87); white-space: nowrap;">
+              {{'contact.info.' + name + '.mobile' | translate}}
+            </h4>
+
+            <p class="list-group-item-text text-lighter-3x">{{'contact.mobile' | translate}}</p>
+          </div>
+        </div>
+
+        <div class="list-group-item" style="padding: 0px;">
+          <div class="row-action-primary no-bg">
+            <i class="material-icons no-bg text-lighter-2x" style="font-size: 36px;">email</i>
+          </div>
+          <div class="row-content">
+            <h4 class="list-group-item-heading" style="color: rgba(255, 255, 255, 0.87); white-space: nowrap;">
+              {{'contact.info.' + name + '.email' | translate}}
+            </h4>
+
+            <p class="list-group-item-text text-lighter-3x">{{'contact.email' | translate}}</p>
+          </div>
+        </div>
+
+        <div class="list-group-item" style="padding: 0px;">
+          <div class="row-action-primary no-bg">
+            <i class="material-icons no-bg text-lighter-2x" style="font-size: 36px;">language</i>
+          </div>
+          <div class="row-content">
+            <h4 class="list-group-item-heading" style="color: rgba(255, 255, 255, 0.87); white-space: nowrap;">
+              {{'contact.info.' + name + '.website' | translate}}
+            </h4>
+
+            <p class="list-group-item-text text-lighter-3x">{{'contact.website' | translate}}</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<a class="btn btn-orange btn-fab fixed-bottom-right" ng-href="/assets/images/contact/{{name}}.{{ (is_en) ? 'en' : 'zh'}}.vcf" target="_blank">
+  <i class="material-icons material-icons-file_download md-24"></i>
+</a>

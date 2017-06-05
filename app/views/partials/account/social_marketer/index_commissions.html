@@ -1,0 +1,82 @@
+<section ng-controller="CommissionsController" ng-if="commissions_calc.total > 0">
+  <div ng-if="!loaded" class="panel panel-default">
+    <div class="panel-body p-no-m pt30 pb30">
+      <div class="text-center">
+        <p class="text-2x text-lighter-1x mb-15">{{'account.commissions.all_time' | translate}}</p>
+        <p class="text-4x pb20 text-lighter-1x">{{'account.commissions.payout' | translate}}</p>
+      </div>
+      <div class="center">
+        <p class="text-lighter-1x">
+          <span class="text-3x">{{'account.commissions.total' | translate}}:</span>
+          <strong class="text-3x text-success">{{get_price_str(commissions_calc.total)}}</strong>
+        </p>
+        <div class="text-lighter-2x">
+          <p class="text-2x pt10">
+            <span>{{'account.commissions.paid' | translate}}:</span>
+            <strong class="text-success">{{get_price_str(0)}}</strong>
+          </p>
+          <p class="text-2x pt10">
+            <span>{{'account.commissions.escro' | translate}}:</span>
+            <strong class="text-success">{{get_price_str(commissions_calc.total)}}</strong>
+          </p>
+          <p class="text-2x pt10">
+            <span>{{'account.commissions.released' | translate}}:</span>
+            <strong class="text-success">{{get_price_str(0)}}</strong>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div ng-if="!loaded" class="panel panel-default">
+    <div class="panel-body pt30 pb30">
+      <div>
+        <div class="text-center">
+          <p class="text-2x text-lighter-1x mb-15">{{'account.commissions.this_period' | translate}}</p>
+          <p class="text-4x pb20 text-lighter-1x">{{'account.commissions.commissions' | translate}}</p>
+        </div>
+
+        <div class="text-center">
+          <div class="text-lighter-1x">
+            <p class="text-2x">{{'account.commissions.total_combine_sales_volume' | translate}}</p>
+            <p class="text-3x text-warning bold">{{get_price_str(commissions_calc.total)}}</p>
+
+            <p class="text-2x pt20">{{'account.commissions.which_qualifies_for' | translate}} <strong class="text-danger">{{commissions_calc.percentage}}%</strong> {{'account.commissions.or' | translate}}</p>
+            <p class="text-3x text-success bold">{{get_price_str(commissions_calc.percentage * commissions_calc.total / 100)}}</p>
+
+            <div class="col-md-12">
+              <div class="progress text-lighter-1x mt20">
+                <div class="progress-bar progress-bar-success progress-bar-striped active" style="width: {{commissions_calc.percentage_to_next}}%; min-width: 2.1em;">
+                  {{commissions_calc.percentage_to_next}}%
+                </div>
+                <div class="progress-bar progress-bar-danger progress-bar-striped active" style="width: {{100 - commissions_calc.percentage_to_next}}%"></div>
+              </div>
+            </div>
+
+            <p class="text-2x pt20 pb10 col-sm-7 center">
+              {{'account.commissions.you_are' | translate}}
+              <strong class="text-success">
+                {{commissions_calc.percentage_to_next.toFixed(2)}}%
+                <span class="text-lighter-2x text-danger">(+{{get_price_str(18)}})</span>
+              </strong>
+              {{'account.commissions.of_the_way_to_earning' | translate}}
+              <strong class="text-success">
+                {{commissions_calc.next_percentage}}%
+                <span ng-if="commissions_calc.percentage_to_next.toFixed(2) > 60" class="text-lighter-2x text-danger">(+{{get_price_str(commissions_calc.next_percentage_payout_usd)}})</span>
+              </strong>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{$state.name}}
+<div ng-if="commissions_calc.total <= 0 && $state.current.name === 'root.account.commissions'">
+  <div class="well">
+    <h1 class="extra-large text-lighter-1x">{{'account.no_orders.title' | translate}}</h1>
+    <p class="lead text-2x text-lighter-2x">{{'account.no_orders.go_get_some' | translate}}</p>
+    <p class="text-large text-lighter-3x"><em>{{'account.no_orders.not_visible' | translate}}</em></p>
+  </div>
+</div>
